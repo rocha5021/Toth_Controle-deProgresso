@@ -152,6 +152,84 @@ QPushButton#PrimaryButton:disabled {{
     color: {TEXT_MUTED};
 }}
 
+QPushButton#DangerButton {{
+    background-color: transparent;
+    color: {STATUS_CRITICAL};
+    border: 1px solid {STATUS_CRITICAL};
+    border-radius: 6px;
+    padding: 6px 12px;
+}}
+QPushButton#DangerButton:hover {{
+    background-color: rgba(208,59,59,0.14);
+}}
+
+QComboBox {{
+    background-color: {SURFACE_PANEL_2};
+    color: {TEXT_PRIMARY};
+    border: 1px solid {BORDER_HAIRLINE};
+    border-radius: 6px;
+    padding: 4px 8px;
+}}
+QLineEdit, QTextEdit, QDateEdit {{
+    background-color: {SURFACE_PANEL_2};
+    color: {TEXT_PRIMARY};
+    border: 1px solid {BORDER_HAIRLINE};
+    border-radius: 6px;
+    padding: 5px 8px;
+}}
+QTableWidget {{
+    background-color: {SURFACE_PANEL};
+    gridline-color: {BORDER_HAIRLINE};
+    border: 1px solid {BORDER_HAIRLINE};
+    border-radius: 8px;
+}}
+QHeaderView::section {{
+    background-color: {SURFACE_PANEL_2};
+    color: {TEXT_MUTED};
+    border: none;
+    padding: 6px;
+    font-weight: 700;
+    font-size: 10.5px;
+    text-transform: uppercase;
+}}
+
+QLabel#PriorityMuitoAlta {{
+    background-color: rgba(208,59,59,0.16);
+    color: #ffb3b0;
+    border: 1px solid {STATUS_CRITICAL};
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 10.5px;
+}}
+QLabel#PriorityAlta {{
+    background-color: rgba(236,131,90,0.14);
+    color: #ffd0bd;
+    border: 1px solid #ec835a;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 10.5px;
+}}
+QLabel#PriorityMedia {{
+    background-color: rgba(212,175,55,0.10);
+    color: {ACCENT_GOLD_BRIGHT};
+    border: 1px solid {BORDER_GOLD};
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 10.5px;
+}}
+QLabel#PriorityBaixa {{
+    background-color: rgba(255,255,255,0.04);
+    color: {TEXT_MUTED};
+    border: 1px solid {BORDER_HAIRLINE};
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 10.5px;
+}}
+
 QScrollArea {{ border: none; }}
 
 QScrollBar:vertical {{

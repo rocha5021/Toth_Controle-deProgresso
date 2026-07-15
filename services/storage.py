@@ -27,19 +27,38 @@ def _character_file(character_id):
     return DATA_DIR / f"{character_id}.json"
 
 
-def load_character_state(character_id):
-    """Estado editavel do personagem (quests concluidas, bestiary marcado,
-    boss farm log, charms ativos etc). Comeca vazio ate o usuario alimentar."""
-    path = _character_file(character_id)
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            return json.load(f)
-    return {
+def _default_state(character_id):
+    state = {
         "quests_concluidas": [],
         "bestiary_progress": {},
         "boss_farm_log": {},
         "charms_ativos": [],
+        "equipamentos": [],
+        "metas": [],
     }
+    if character_id == "ek_haxta":
+        # roadmap Level 602 -> 1000+ do Haxta ja vem pre-preenchido
+        from services import reference_data
+        state["equipamentos"] = reference_data.build_equipamentos_seed()
+        state["metas"] = reference_data.build_metas_seed()
+    return state
+
+
+def load_character_state(character_id):
+    """Estado editavel do personagem (quests concluidas, bestiary marcado,
+    boss farm log, charms ativos, equipamentos, metas etc). Personagens novos
+    comecam vazios, exceto o Haxta que ja vem com o roadmap 602->1000+ seed."""
+    path = _character_file(character_id)
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            state = json.load(f)
+        # garante que estados salvos antes de um campo novo existir nao quebrem
+        # (usa o default/seed correto por personagem, nao uma lista vazia generica)
+        for key, default in _default_state(character_id).items():
+            if key not in state:
+                state[key] = default
+        return state
+    return _default_state(character_id)
 
 
 def save_character_state(character_id, state):

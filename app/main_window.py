@@ -15,10 +15,14 @@ from services.background_refresh import BackgroundRefreshManager
 from app.views.personagem_view import PersonagemView
 from app.views.bosses_view import BossesView
 from app.views.charms_view import CharmsView
+from app.views.equipamentos_view import EquipamentosView
+from app.views.metas_view import MetasView
 from app.views.placeholder_view import PlaceholderView
 
 NAV_SECTIONS = [
     ("personagem", "Personagem"),
+    ("equipamentos", "Equipamentos"),
+    ("metas", "Metas"),
     ("hunts", "Hunts (Lucro)"),
     ("bosses", "Bosses (Rotacao)"),
     ("bestiary", "Bestiary"),
@@ -35,7 +39,7 @@ PLACEHOLDER_DESCRIPTIONS = {
 }
 
 # secoes que ja tem uma view funcional propria (nao usam PlaceholderView)
-REAL_VIEW_KEYS = {"personagem", "bosses", "charms"}
+REAL_VIEW_KEYS = {"personagem", "bosses", "charms", "equipamentos", "metas"}
 
 
 class MainWindow(QMainWindow):
@@ -76,6 +80,12 @@ class MainWindow(QMainWindow):
 
         self.charms_view = CharmsView(storage)
         self._add_section("charms", self.charms_view)
+
+        self.equipamentos_view = EquipamentosView(storage)
+        self._add_section("equipamentos", self.equipamentos_view)
+
+        self.metas_view = MetasView(storage)
+        self._add_section("metas", self.metas_view)
 
         for key, label in NAV_SECTIONS:
             if key in REAL_VIEW_KEYS:
@@ -148,6 +158,8 @@ class MainWindow(QMainWindow):
         self.personagem_view.set_character(self.current_character)
         self.bosses_view.set_character(self.current_character)
         self.charms_view.set_character(self.current_character)
+        self.equipamentos_view.set_character(self.current_character)
+        self.metas_view.set_character(self.current_character)
 
     def _show_section(self, key):
         self.stack.setCurrentWidget(self._section_views[key])

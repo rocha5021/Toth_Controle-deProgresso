@@ -89,3 +89,54 @@ def build_charms():
 
 
 CHARMS = build_charms()
+
+
+# ---------------------------------------------------------------------------
+# EQUIPAMENTOS + METAS - seed inicial do Haxta (EK), roadmap Level 602 -> 1000+
+# ---------------------------------------------------------------------------
+# prioridade, equipamento, valor_kk (None = ainda nao sabido)
+EK_EQUIPAMENTOS_SEED = [
+    (1, "Sanguine Bludgeon", 19),
+    (2, "Falcon Greaves", 55),
+    (3, "Falcon Plate", 32),
+    (4, "Falcon Helmet", 18),
+    (5, "Soulwalkers", None),
+    (6, "Spiritthorn Helmet", None),
+    (7, "Spiritthorn Armor", None),
+    (8, "Spiritthorn Legs", None),
+]
+
+# titulo, status
+EK_METAS_SEED = [
+    ("Comprar Falcon Greaves", "Pendente"),
+    ("Comprar Falcon Plate", "Pendente"),
+    ("Comprar Sanguine Bludgeon", "Pendente"),
+    ("Transferir para Inabra", "Planejado"),
+    ("Chegar no Level 650", "Em andamento"),
+    ("Chegar no Club 100", "Em andamento"),
+    ("Club 110", "Pendente"),
+    ("Club 120", "Pendente"),
+]
+
+PRIORIDADES_META = ["Muito Alta", "Alta", "Media", "Baixa"]
+STATUS_META = ["Pendente", "Planejado", "Em andamento", "Concluido"]
+
+
+def build_equipamentos_seed():
+    import uuid
+    return [
+        {"id": uuid.uuid4().hex, "prioridade": p, "nome": nome, "valor_kk": valor}
+        for p, nome, valor in EK_EQUIPAMENTOS_SEED
+    ]
+
+
+def build_metas_seed():
+    import uuid
+    return [
+        {
+            "id": uuid.uuid4().hex, "titulo": titulo, "descricao": "", "categoria": "",
+            "prioridade": "Media", "data": "", "valor_kk": None, "observacoes": "",
+            "status": status,
+        }
+        for titulo, status in EK_METAS_SEED
+    ]
