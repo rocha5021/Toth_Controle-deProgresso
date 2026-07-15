@@ -13,6 +13,8 @@ from PySide6.QtWidgets import (
 from services import storage
 from services.background_refresh import BackgroundRefreshManager
 from app.views.personagem_view import PersonagemView
+from app.views.bosses_view import BossesView
+from app.views.charms_view import CharmsView
 from app.views.placeholder_view import PlaceholderView
 
 NAV_SECTIONS = [
@@ -24,14 +26,16 @@ NAV_SECTIONS = [
     ("quests", "Quests"),
 ]
 
+# secoes que ainda nao tem view real - mostram um aviso "em construcao"
 PLACEHOLDER_DESCRIPTIONS = {
     "hunts": "Sugestao de hunts priorizando lucro liquido com o menor gasto possivel (EK) "
              "ou progresso de Bestiary (MS). Depende de um motor de custo/lucro novo — ver CHECKLIST.md.",
-    "bosses": "Rotacao de bosses com cooldown, por personagem. Porting do controle de farm do dashboard anterior.",
     "bestiary": "Progresso de Bestiary por personagem (Haxta e Tio Musga tem progressos diferentes).",
-    "charms": "Charms de referencia + selecao ativa por personagem.",
     "quests": "Tracker de quests concluidas/pendentes por personagem — pronto para receber a lista que voce vai enviar.",
 }
+
+# secoes que ja tem uma view funcional propria (nao usam PlaceholderView)
+REAL_VIEW_KEYS = {"personagem", "bosses", "charms"}
 
 
 class MainWindow(QMainWindow):
@@ -66,7 +70,16 @@ class MainWindow(QMainWindow):
         self._section_views = {}
         self.personagem_view = PersonagemView(self.refresh_manager)
         self._add_section("personagem", self.personagem_view)
-        for key, label in NAV_SECTIONS[1:]:
+
+        self.bosses_view = BossesView(storage)
+        self._add_section("bosses", self.bosses_view)
+
+        self.charms_view = CharmsView(storage)
+        self._add_section("charms", self.charms_view)
+
+        for key, label in NAV_SECTIONS:
+            if key in REAL_VIEW_KEYS:
+                continue
             view = PlaceholderView(label, PLACEHOLDER_DESCRIPTIONS.get(key, ""))
             self._add_section(key, view)
 
@@ -133,6 +146,8 @@ class MainWindow(QMainWindow):
     def _select_character(self, character_id):
         self.current_character = next(c for c in self.characters if c["id"] == character_id)
         self.personagem_view.set_character(self.current_character)
+        self.bosses_view.set_character(self.current_character)
+        self.charms_view.set_character(self.current_character)
 
     def _show_section(self, key):
         self.stack.setCurrentWidget(self._section_views[key])

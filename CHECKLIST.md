@@ -57,8 +57,23 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
       vocação, mortes recentes, último login) + tabela Top 3 Level do Tibia.
       **Testado rodando de verdade**, confirmado por screenshot e pelo
       `data/cache_tracked.json` gerado com dados reais.
-- [x] Abas Hunts/Bosses/Bestiary/Charms/Quests existem no menu com uma tela
-      "em construção" (para não fingir que já funcionam).
+- [x] Ícone do app (`app/thoth_icon.ico`, gerado com PIL, tema preto+dourado) +
+      atalho **Thoth.lnk** na área de trabalho, aponta pra `pythonw.exe` (sem
+      janela de terminal) — testado, abre o app com duplo clique.
+- [x] Repositório Git criado e enviado: **https://github.com/rocha5021/Toth_Controle-deProgresso**
+      (branch `main`, primeiro commit com o core do app). `.gitignore` exclui
+      cache de dados/estado por personagem (nada sensível versionado).
+- [x] **Bosses** — view real implementada: 30 bosses portados de `_BOSS_RAW`
+      (dashboard antigo), com imagem real (35/48 resolvidas via TibiaWiki,
+      ver nota de taxa de acerto abaixo) e **rotação de farm por personagem**
+      (botão "Marcar farmado hoje" + cooldown calculado, salvo em
+      `data/<personagem>.json`). Testado (30 linhas renderizando corretamente).
+- [x] **Charms** — view real implementada: 18 charms portados de `CHARMS_DB`,
+      com imagem real e **checkbox de "ativo" por personagem** (salvo em
+      `data/<personagem>.json`). Testado (18 linhas renderizando corretamente).
+- [x] `services/image_cache.py` — cache local (`data/image_cache.json`) das
+      URLs resolvidas via `wiki_images.py`, pra não bater na TibiaWiki toda
+      vez que o app abre.
 
 ## 🚧 Pendente (próximos passos, na ordem que foram pedidos)
 
@@ -66,27 +81,54 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
       menor gasto possível**. Hoje os dados de hunt (`_HUNT_RAW` no dashboard
       antigo) não têm campo de custo — precisa desenhar uma estimativa de custo
       (supplies) por hunt antes de calcular lucro líquido de verdade.
-- [ ] **Rotação de bosses do EK** — portar o controle de cooldown/farm (existia
-      no dashboard antigo como `ek_boss_farm`, mas era compartilhado — agora
-      precisa ser por personagem, usando `storage.py`).
 - [ ] **Bestiary por personagem** — Haxta e Tio Musga têm progressos diferentes;
       hoje o dado bruto (645 criaturas, `bestiary_raw.txt`) é só uma lista de
-      referência, ainda não há campo de progresso por personagem.
-- [ ] **Charms** — referência + seleção ativa por personagem.
+      referência, ainda não há campo de progresso por personagem. Imagens: taxa
+      de acerto testada em 59/60 numa amostra — deve ir bem.
 - [ ] **Quests** — tracker novo (vazio), pronto pra receber a lista que o
       usuário vai enviar com as quests **já concluídas** de Haxta e Tio Musga.
 - [ ] **MS (Tio Musga)**: aba/seção específica cobrindo PvP e GvG (quando
       necessário), treino de Magic Level, e hunt em PT — item futuro, o
       usuário mencionou que ainda não faz isso hoje.
-- [ ] **Bestiary já concluído** — usuário vai enviar lista do que já foi feito
-      em cada personagem, pra pré-popular o progresso em vez de começar do zero.
-- [ ] **Cyclopedia com imagens reais** (retomar) — usar a técnica
-      `Especial:FilePath` já validada para trazer imagens de itens/criaturas/
-      charms/bosses reais na interface, sem precisar baixar nada.
+- [ ] **Bestiary/Quests já concluídos** — usuário vai enviar lista do que já
+      foi feito em cada personagem, pra pré-popular o progresso em vez de
+      começar do zero.
+- [ ] **Armas (Club) + Equipamentos** — existiam no dashboard antigo
+      (`WEAPONS_CLUB`, `EQUIPAMENTOS`), ainda não portados pro Thoth. Taxa de
+      acerto de imagem testada mais baixa pra equipamentos (8/18) — os nomes
+      no dashboard antigo eram estimativas, não bateram exato com a wiki;
+      validar nome real por item quando formos portar.
+- [ ] **Bosstiary** (Bane/Archfoe/Nemesis) — é **diferente** de "Bosses"
+      (que já portamos): Bosstiary é o sistema de progressão de steps do
+      próprio jogo. Existia como lista estática de 20 bosses no dashboard
+      antigo (`_BOSSTIARY_RAW`/`BOSSTIARY_DB`), não portado ainda.
+- [ ] **Renomear pasta `Planilha` → `Hermes`** — bloqueado: o VS Code está
+      com a pasta aberta e trava o rename no Windows. Fazer quando o VS Code
+      não estiver com a pasta aberta.
 - [ ] Ideia mencionada pelo usuário para o futuro: gravar gameplay e cortar
       vídeos pra redes sociais — reforça que a UI deve ficar visualmente
       cuidada (tema já aplicado, mas dar atenção a polish visual conforme
       as abas forem ficando funcionais).
+
+## 📋 Auditoria: dashboard web antigo vs Thoth (o que ainda falta portar)
+
+Seções que existiam no dashboard web antigo e **ainda não têm equivalente**
+no Thoth (nem placeholder no menu):
+
+- **Dashboard** (visão geral/resumo) — não existe ainda no Thoth.
+- **Financeiro** — controle de entradas/saídas/lucro. Fazia sentido pra 1
+  personagem só; com EK+MS precisa decidir se é por personagem ou geral.
+- **Upgrade Advisor** — sugestão de compra por gold disponível.
+- **Wheel of Destiny** — builds recomendadas por contexto de hunt.
+- **Roadmap 602-1000+** — específico do Haxta antigo (nível 602→1000+);
+  precisa decidir se isso continua fazendo sentido do jeito que era.
+- **Metas/Planejamento** — rotina semanal + metas diárias/semanais/mensais.
+- **Checklist Diário** — lista de tarefas que reseta todo dia.
+- **Transferência** — plano de migração Peloria→Inabra (Haxta); específico
+  do contexto antigo, precisa validar se ainda é relevante.
+
+Essas não foram esquecidas — ficam registradas aqui pra decidir prioridade
+com o usuário antes de portar (nem tudo pode fazer sentido no formato EK+MS).
 
 ## 🗑️ Descartado / revertido
 
@@ -105,10 +147,12 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
   redireciona pro arquivo estático real, sem Cloudflare.
 - Bazaar oficial (não usado mais, mas documentado): `https://www.tibia.com/charactertrade/`
   — atrás de Cloudflare Turnstile, só acessível via Chromium headless (Playwright).
+- Repositório do Thoth: `https://github.com/rocha5021/Toth_Controle-deProgresso`
 
 ## Pastas do projeto
 
 - `Planilha/legacy_web_dashboard/` — dashboard web antigo (HTML/CSS/JS +
   gerador Python + servidor Flask), arquivado, intacto.
-- `Planilha/Thoth/` — app novo, em desenvolvimento ativo.
+- `Planilha/Thoth/` — app novo, em desenvolvimento ativo (também no GitHub).
 - `Planilha/EK_Management_System.xlsx` — planilha original, na raiz.
+- Pendente renomear `Planilha/` → `Hermes/` (bloqueado pelo VS Code, ver acima).
