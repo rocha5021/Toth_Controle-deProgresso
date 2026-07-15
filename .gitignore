@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/cache_tracked.json
+data/ek_haxta.json
+data/ms_tiomusga.json
+*.log

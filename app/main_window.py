@@ -1,0 +1,138 @@
+"""
+Janela principal do Thoth: seletor de personagem (Haxta/EK <-> Tio
+Musga/MS) no topo, sidebar de navegacao, area de conteudo com uma view
+por secao. Trocar de personagem re-renderiza a secao atual com o
+contexto do personagem escolhido.
+"""
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import (
+    QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
+    QStackedWidget, QButtonGroup, QFrame,
+)
+
+from services import storage
+from services.background_refresh import BackgroundRefreshManager
+from app.views.personagem_view import PersonagemView
+from app.views.placeholder_view import PlaceholderView
+
+NAV_SECTIONS = [
+    ("personagem", "Personagem"),
+    ("hunts", "Hunts (Lucro)"),
+    ("bosses", "Bosses (Rotacao)"),
+    ("bestiary", "Bestiary"),
+    ("charms", "Charms"),
+    ("quests", "Quests"),
+]
+
+PLACEHOLDER_DESCRIPTIONS = {
+    "hunts": "Sugestao de hunts priorizando lucro liquido com o menor gasto possivel (EK) "
+             "ou progresso de Bestiary (MS). Depende de um motor de custo/lucro novo — ver CHECKLIST.md.",
+    "bosses": "Rotacao de bosses com cooldown, por personagem. Porting do controle de farm do dashboard anterior.",
+    "bestiary": "Progresso de Bestiary por personagem (Haxta e Tio Musga tem progressos diferentes).",
+    "charms": "Charms de referencia + selecao ativa por personagem.",
+    "quests": "Tracker de quests concluidas/pendentes por personagem — pronto para receber a lista que voce vai enviar.",
+}
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Thoth — Gerenciamento Haxta (EK) & Tio Musga (MS)")
+        self.resize(1280, 860)
+
+        self.characters = storage.load_characters()
+        self.refresh_manager = BackgroundRefreshManager(
+            character_names=[c["name"] for c in self.characters]
+        )
+
+        central = QWidget()
+        self.setCentralWidget(central)
+        outer = QVBoxLayout(central)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+
+        outer.addWidget(self._build_character_switch())
+
+        body = QHBoxLayout()
+        body.setContentsMargins(0, 0, 0, 0)
+        body.setSpacing(0)
+        outer.addLayout(body)
+
+        body.addWidget(self._build_sidebar())
+
+        self.stack = QStackedWidget()
+        body.addWidget(self.stack, stretch=1)
+
+        self._section_views = {}
+        self.personagem_view = PersonagemView(self.refresh_manager)
+        self._add_section("personagem", self.personagem_view)
+        for key, label in NAV_SECTIONS[1:]:
+            view = PlaceholderView(label, PLACEHOLDER_DESCRIPTIONS.get(key, ""))
+            self._add_section(key, view)
+
+        self.current_character = self.characters[0]
+        self._select_character(self.current_character["id"])
+        self._show_section("personagem")
+        self.refresh_manager.refresh()
+
+    def _add_section(self, key, widget):
+        self._section_views[key] = widget
+        self.stack.addWidget(widget)
+
+    def _build_character_switch(self):
+        bar = QFrame()
+        bar.setObjectName("CharacterSwitch")
+        bar.setStyleSheet("margin: 14px 16px 0 16px;")
+        layout = QHBoxLayout(bar)
+        layout.setContentsMargins(10, 10, 10, 10)
+        layout.setSpacing(8)
+
+        brand = QLabel("THOTH")
+        brand.setStyleSheet("font-weight: 700; letter-spacing: 1px; margin-right: 12px;")
+        layout.addWidget(brand)
+
+        self.char_button_group = QButtonGroup(self)
+        self.char_button_group.setExclusive(True)
+        for character in self.characters:
+            btn = QPushButton(character["label"])
+            btn.setObjectName("CharButton")
+            btn.setCheckable(True)
+            btn.clicked.connect(lambda _checked, cid=character["id"]: self._select_character(cid))
+            self.char_button_group.addButton(btn)
+            layout.addWidget(btn)
+            if character is self.characters[0]:
+                btn.setChecked(True)
+
+        layout.addStretch()
+        return bar
+
+    def _build_sidebar(self):
+        sidebar = QFrame()
+        sidebar.setObjectName("Sidebar")
+        sidebar.setFixedWidth(230)
+        layout = QVBoxLayout(sidebar)
+        layout.setContentsMargins(10, 16, 10, 16)
+        layout.setSpacing(4)
+        layout.setAlignment(Qt.AlignTop)
+
+        self.nav_button_group = QButtonGroup(self)
+        self.nav_button_group.setExclusive(True)
+        for key, label in NAV_SECTIONS:
+            btn = QPushButton(label)
+            btn.setObjectName("NavButton")
+            btn.setCheckable(True)
+            btn.clicked.connect(lambda _checked, k=key: self._show_section(k))
+            self.nav_button_group.addButton(btn)
+            layout.addWidget(btn)
+            if key == "personagem":
+                btn.setChecked(True)
+
+        layout.addStretch()
+        return sidebar
+
+    def _select_character(self, character_id):
+        self.current_character = next(c for c in self.characters if c["id"] == character_id)
+        self.personagem_view.set_character(self.current_character)
+
+    def _show_section(self, key):
+        self.stack.setCurrentWidget(self._section_views[key])
