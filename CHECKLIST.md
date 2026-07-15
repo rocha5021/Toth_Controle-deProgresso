@@ -74,9 +74,27 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
 - [x] `services/image_cache.py` — cache local (`data/image_cache.json`) das
       URLs resolvidas via `wiki_images.py`, pra não bater na TibiaWiki toda
       vez que o app abre.
+- [x] **Equipamentos** (objetivo: gerenciar evolução Level 602 → 1000+) — lista
+      editável (Adicionar/Editar/Excluir/Duplicar/Mover) já pré-cadastrada com
+      os 8 itens pedidos: Sanguine Bludgeon (19kk), Falcon Greaves (55kk),
+      Falcon Plate (32kk), Falcon Helmet (18kk), Soulwalkers, Spiritthorn
+      Helmet/Armor/Legs (valor em aberto). Testado (8 linhas corretas).
+- [x] **Metas** — lista com modal "Nova Meta" (Título, Descrição, Categoria,
+      Prioridade, Data, Valor, Observações) e prioridade colorida automática
+      (Muito Alta = vermelho, Alta = laranja, Média = dourado, Baixa = cinza).
+      Já pré-cadastrada com as 8 metas pedidas (Falcon Greaves/Plate/Sanguine
+      Bludgeon pendentes, Transferir p/ Inabra planejado, Level 650 e Club 100
+      em andamento, Club 110/120 pendentes). Testado (8 linhas corretas).
+- [x] Seed do Equipamentos/Metas é **só do Haxta (EK)** — Tio Musga (MS) começa
+      vazio, já que esse roadmap é específico do personagem guerreiro.
 
 ## 🚧 Pendente (próximos passos, na ordem que foram pedidos)
 
+- [ ] **Patrimônio / Planejamento financeiro / Roadmap visual** — o objetivo
+      "gerenciar toda evolução Level 602 → 1000+" mencionou também patrimônio
+      e planejamento financeiro; só Equipamentos e Metas ganharam specs
+      concretas até agora. Financeiro já existia no dashboard antigo
+      (entradas/saídas/lucro) — falta decidir se porta como está ou redesenha.
 - [ ] **Hunts do EK** — motor de sugestão priorizando **lucro líquido com o
       menor gasto possível**. Hoje os dados de hunt (`_HUNT_RAW` no dashboard
       antigo) não têm campo de custo — precisa desenhar uma estimativa de custo
