@@ -56,29 +56,48 @@ def get_worlds():
     return [w["name"] for w in data["worlds"]["regular_worlds"]]
 
 
-def get_top_levels(limit=3, world_list=None, pause=0.12):
+def _fetch_highscore_pool(world_list=None, pause=0.12):
     """
-    Nao existe highscore global de level na TibiaData API (so por mundo).
-    Entao varremos o highscore de 'experience' (equivalente a level) de
-    cada mundo, pegamos o #1 de cada um e ordenamos globalmente.
+    Nao existe highscore global de level (nem filtro por vocacao) na
+    TibiaData API v4 - so por mundo, so 'all'. Entao varremos a pagina 1
+    (ate 50 entradas) do highscore de 'experience' de cada mundo - o
+    mesmo dado que ja buscavamos, so que aproveitando a lista inteira em
+    vez de so o #1 - e formamos um pool que da pra usar tanto pro Top N
+    global quanto pro Top N por vocacao, sem nenhum request a mais.
     """
     worlds = world_list or get_worlds()
-    best = []
+    pool = []
     for w in worlds:
         try:
             data = _get(f"highscores/{w}/experience/all/1")
             lst = data.get("highscores", {}).get("highscore_list", [])
-            if lst:
-                top = lst[0]
-                best.append({
-                    "name": top["name"],
-                    "level": top["level"],
-                    "vocation": top.get("vocation", ""),
+            for entry in lst:
+                pool.append({
+                    "name": entry["name"],
+                    "level": entry["level"],
+                    "vocation": entry.get("vocation", ""),
                     "world": w,
-                    "points": top.get("value"),
+                    "points": entry.get("value"),
                 })
         except Exception:
             pass
         time.sleep(pause)
-    best.sort(key=lambda x: -x["level"])
-    return best[:limit]
+    return pool
+
+
+def get_top_levels(limit=3, world_list=None, pause=0.12, pool=None):
+    pool = pool if pool is not None else _fetch_highscore_pool(world_list, pause)
+    return sorted(pool, key=lambda x: -x["level"])[:limit]
+
+
+def get_top_levels_by_vocation(limit=20, world_list=None, pause=0.12, pool=None):
+    """Retorna {vocacao: [top N do pool]} - reusa o mesmo pool de
+    get_top_levels se for passado, pra nao duplicar as 93 requests."""
+    pool = pool if pool is not None else _fetch_highscore_pool(world_list, pause)
+    by_vocation = {}
+    for entry in pool:
+        by_vocation.setdefault(entry["vocation"], []).append(entry)
+    return {
+        voc: sorted(entries, key=lambda x: -x["level"])[:limit]
+        for voc, entries in by_vocation.items()
+    }

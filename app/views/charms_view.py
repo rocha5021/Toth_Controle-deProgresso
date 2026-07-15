@@ -8,23 +8,14 @@ from PySide6.QtWidgets import (
     QHeaderView, QAbstractItemView, QCheckBox, QHBoxLayout,
 )
 
-from services import reference_data, image_cache
-from app.image_loader import load_pixmap
-
-STATUS_BADGE = {
-    "Ativo": "good",
-    "Concluido": "good",
-    "Planejado": "warning",
-    "Opcional": "neutral",
-}
+from controllers import charms_controller
+from app.image_loader import load_pixmap, prefetch_many
 
 
 class CharmsView(QWidget):
-    def __init__(self, storage_module):
+    def __init__(self):
         super().__init__()
-        self.storage = storage_module
-        self.character_config = None
-        self.state = None
+        self.character_id = None
 
         root = QVBoxLayout(self)
         root.setContentsMargins(28, 24, 28, 24)
@@ -49,32 +40,25 @@ class CharmsView(QWidget):
         root.addWidget(self.table)
 
     def set_character(self, character_config):
-        self.character_config = character_config
-        self.state = self.storage.load_character_state(character_config["id"])
+        self.character_id = character_config["id"]
+        charms = charms_controller.list_charms(self.character_id)
+        prefetch_many([c["image_url"] for c in charms])
         self._render()
 
     def _toggle_active(self, name, checked):
-        ativos = set(self.state.setdefault("charms_ativos", []))
-        if checked:
-            ativos.add(name)
-        else:
-            ativos.discard(name)
-        self.state["charms_ativos"] = sorted(ativos)
-        self.storage.save_character_state(self.character_config["id"], self.state)
+        charms_controller.set_active(self.character_id, name, checked)
 
     def _render(self):
-        if not self.character_config:
+        if not self.character_id:
             return
-        charms = sorted(reference_data.CHARMS, key=lambda c: c["prioridade"])
-        ativos = set((self.state or {}).get("charms_ativos", []))
+        charms = charms_controller.list_charms(self.character_id)
         self.table.setRowCount(len(charms))
 
         for row, charm in enumerate(charms):
             name = charm["nome"]
 
             img_label = QLabel()
-            url = image_cache.get_image_url(name, "charm")
-            pixmap = load_pixmap(url, 24)
+            pixmap = load_pixmap(charm.get("image_url"), 24)
             if pixmap:
                 img_label.setPixmap(pixmap)
             img_label.setAlignment(Qt.AlignCenter)
@@ -85,7 +69,7 @@ class CharmsView(QWidget):
             checkbox_layout.setContentsMargins(0, 0, 0, 0)
             checkbox_layout.setAlignment(Qt.AlignCenter)
             checkbox = QCheckBox()
-            checkbox.setChecked(name in ativos)
+            checkbox.setChecked(charm["ativo"])
             checkbox.toggled.connect(lambda checked, n=name: self._toggle_active(n, checked))
             checkbox_layout.addWidget(checkbox)
             self.table.setCellWidget(row, 1, checkbox_wrap)

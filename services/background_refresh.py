@@ -36,15 +36,19 @@ class _FetchWorker(QThread):
                     characters.append({"name": name, "error": str(e)})
 
             try:
-                top_levels = tibiadata.get_top_levels(limit=3)
+                pool = tibiadata._fetch_highscore_pool()
+                top_levels = tibiadata.get_top_levels(limit=20, pool=pool)
+                top_levels_by_vocation = tibiadata.get_top_levels_by_vocation(limit=20, pool=pool)
             except Exception:
                 cached = storage.load_tracked_cache() or {}
                 top_levels = cached.get("top_levels", [])
+                top_levels_by_vocation = cached.get("top_levels_by_vocation", {})
 
             payload = {
                 "updated_at": time.time(),
                 "characters": characters,
                 "top_levels": top_levels,
+                "top_levels_by_vocation": top_levels_by_vocation,
             }
             storage.save_tracked_cache(payload)
             self.finished_ok.emit(payload)

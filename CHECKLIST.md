@@ -1,8 +1,9 @@
 # Thoth — Checklist do Projeto
 
-App desktop Python (PySide6/Qt) para gerenciar dois personagens de Tibia:
+App desktop Python (PySide6/Qt) para gerenciar personagens de Tibia:
 - **Haxta (EK)** — Elite Knight, foco em **lucro** (menor gasto possível).
 - **Tio Musga (MS)** — Master Sorcerer, foco em **Bestiary / PvP-GvG / ML**.
+- Suporta **N personagens** (botão "+ Novo Personagem").
 
 Este arquivo é o histórico vivo de tudo que já foi pedido, decidido e construído.
 Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
@@ -11,166 +12,147 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
 
 ## ✅ Concluído
 
-- [x] Dashboard web (HTML/CSS/JS) original construído em `legacy_web_dashboard/`
-      (arquivado, não apagado — o gerador Python `data.py`/`build.py` e o antigo
-      servidor Flask também estão lá dentro).
-- [x] Conexão com dados reais do Tibia via **TibiaData API** (`api.tibiadata.com`,
-      projeto comunitário — não existe API oficial da CipSoft).
-- [x] Validado: Haxta = Elite Knight level ~605, mundo Peloria. Tio Musga = Sorcerer
-      level 402, mundo Inabra. (Níveis mudam ao vivo — já vimos Haxta subir de
-      604→605 durante os testes.)
-- [x] Top 3 de level do Tibia calculado varrendo os 93 mundos oficiais via
-      highscores de experience (não existe highscore global de level na API):
-      **Dejairzin** (3119, Ferobra), **Bobeek** (3082, Bona), **Veyllor** (3055, Gentebra).
-      Validado batendo com o highscores oficial do site.
-- [x] Character Bazaar (Trade): implementado no dashboard web (scraping via
-      Chromium headless, contorna Cloudflare) e depois **removido a pedido do
-      usuário** — não é mais prioridade.
-- [x] Pesquisa de imagens reais da TibiaWiki Brasil (tibiawiki.com.br):
-      - Página normal (`/wiki/<Nome>`) passa pelo desafio Cloudflare via Chromium headless.
-      - **Descoberta chave**: `Especial:FilePath/<Arquivo>` redireciona pro
-        arquivo estático real (`/images/.../Nome.gif`) e esse caminho **não** fica
-        atrás do Cloudflare — dá pra linkar direto sem headless browser e sem
-        precisar baixar a imagem.
-      - Taxa de acerto testada: Bestiary 59/60, Charms 17/18 (padrão `Nome_Icon.gif`),
-        Armas 7/8. Equipamentos e Bosses tiveram taxa menor (nomes não batem
-        exatamente com a wiki) — precisa checar nome real por item quando formos
-        implementar essa parte.
-      - **Pausado** até o core do Thoth estar pronto (ver pendências).
-- [x] Decisão: recomeçar como **app desktop 100% Python** (não navegador/JS).
-      Motivo do usuário: consistência de stack + quer gravar vídeos/cortes pra
-      redes sociais mostrando o app, quer algo mais "profissional".
-- [x] Nome escolhido: **Thoth** (deus egípcio da sabedoria e do registro de
-      conhecimento). Framework: **PySide6 (Qt)**.
-- [x] Estrutura do projeto criada (`Thoth/app`, `Thoth/services`, `Thoth/data`),
-      tema escuro+dourado (QSS) espelhando o visual do dashboard antigo.
-- [x] `services/tibiadata.py` e `services/wiki_images.py` portados do servidor
-      Flask antigo (funcionam standalone, sem Flask/HTTP).
-- [x] `services/storage.py`: persistência local em JSON, **um arquivo por
-      personagem** (`data/ek_haxta.json`, `data/ms_tiomusga.json`) — resolve o
-      problema encontrado no dashboard antigo, onde bestiary/bosses/charms eram
-      um **estado único compartilhado**, sem separar por personagem.
-- [x] Janela principal com **seletor de personagem** no topo (Haxta/EK ↔ Tio
-      Musga/MS), sidebar de navegação, atualização automática a cada 3h em
-      background (`QThread`) + botão "Atualizar agora" com limite de 2 min.
-- [x] Aba **Personagem** funcional com dados reais ao vivo (level, mundo,
-      vocação, mortes recentes, último login) + tabela Top 3 Level do Tibia.
-      **Testado rodando de verdade**, confirmado por screenshot e pelo
-      `data/cache_tracked.json` gerado com dados reais.
-- [x] Ícone do app (`app/thoth_icon.ico`, gerado com PIL, tema preto+dourado) +
-      atalho **Thoth.lnk** na área de trabalho, aponta pra `pythonw.exe` (sem
-      janela de terminal) — testado, abre o app com duplo clique.
-- [x] Repositório Git criado e enviado: **https://github.com/rocha5021/Toth_Controle-deProgresso**
-      (branch `main`, primeiro commit com o core do app). `.gitignore` exclui
-      cache de dados/estado por personagem (nada sensível versionado).
-- [x] **Bosses** — view real implementada: 30 bosses portados de `_BOSS_RAW`
-      (dashboard antigo), com imagem real (35/48 resolvidas via TibiaWiki,
-      ver nota de taxa de acerto abaixo) e **rotação de farm por personagem**
-      (botão "Marcar farmado hoje" + cooldown calculado, salvo em
-      `data/<personagem>.json`). Testado (30 linhas renderizando corretamente).
-- [x] **Charms** — view real implementada: 18 charms portados de `CHARMS_DB`,
-      com imagem real e **checkbox de "ativo" por personagem** (salvo em
-      `data/<personagem>.json`). Testado (18 linhas renderizando corretamente).
-- [x] `services/image_cache.py` — cache local (`data/image_cache.json`) das
-      URLs resolvidas via `wiki_images.py`, pra não bater na TibiaWiki toda
-      vez que o app abre.
-- [x] **Equipamentos** (objetivo: gerenciar evolução Level 602 → 1000+) — lista
-      editável (Adicionar/Editar/Excluir/Duplicar/Mover) já pré-cadastrada com
-      os 8 itens pedidos: Sanguine Bludgeon (19kk), Falcon Greaves (55kk),
-      Falcon Plate (32kk), Falcon Helmet (18kk), Soulwalkers, Spiritthorn
-      Helmet/Armor/Legs (valor em aberto). Testado (8 linhas corretas).
-- [x] **Metas** — lista com modal "Nova Meta" (Título, Descrição, Categoria,
-      Prioridade, Data, Valor, Observações) e prioridade colorida automática
-      (Muito Alta = vermelho, Alta = laranja, Média = dourado, Baixa = cinza).
-      Já pré-cadastrada com as 8 metas pedidas (Falcon Greaves/Plate/Sanguine
-      Bludgeon pendentes, Transferir p/ Inabra planejado, Level 650 e Club 100
-      em andamento, Club 110/120 pendentes). Testado (8 linhas corretas).
-- [x] Seed do Equipamentos/Metas é **só do Haxta (EK)** — Tio Musga (MS) começa
-      vazio, já que esse roadmap é específico do personagem guerreiro.
+### Fundação (arquitetura em camadas + SQLite)
+- [x] **Banco SQLite** (`data/thoth.db`) substitui os arquivos JSON por personagem.
+      Tabelas: `characters`, `equipment_planning`, `goals`, `roadmap_steps`,
+      `bestiary_progress`, `boss_farm_log`, `charms_active`.
+- [x] **Arquitetura em camadas**: `db/` (conexão+schema+seed) → `repositories/`
+      (CRUD puro por tabela) → `services/` (regras de negócio - progresso,
+      status derivado) → `controllers/` (orquestram repo+service pras views) →
+      `app/views/` (só UI, sem lógica de negócio direto na tela).
+- [x] **Seed automático** quando o banco está vazio: personagens, equipamentos e
+      metas do Haxta, roadmap de 9 etapas (602→1000+) pros dois, e o **bestiary
+      real do Haxta** — usa o export verdadeiro do Cyclopedia dele
+      (`bestiary_raw.txt`, 645 criaturas com kills reais), não começa do zero.
+- [x] Corrigido um bug real do protótipo anterior (JSON): estado salvo antes de
+      um campo novo existir perdia o seed ao recarregar.
 
-## 🚧 Pendente (próximos passos, na ordem que foram pedidos)
+### Conteúdo completo (resolvendo o "app vazio/incompleto")
+- [x] **Bestiary** — sai de placeholder pra tela real: 645 criaturas, imagem
+      real (97.8% resolvida), filtro por status (Completo/Em andamento/
+      Pendente), busca por nome, **contador de mortes editável (+/-) por
+      criatura, por personagem**. Haxta já mostra os kills reais dele.
+- [x] **Bosses** — roster **completo** do Bosstiary (315 bosses reais, tiers
+      Bane/Archfoe/Nemesis — extraído da própria TibiaWiki, não mais uma
+      lista curada de 30), com imagem real (315/315), busca, filtro por tier,
+      e farm/cooldown por personagem.
+- [x] **Charms** — 18 charms com imagem real e seleção de "ativos" por personagem.
 
-- [ ] **Patrimônio / Planejamento financeiro / Roadmap visual** — o objetivo
-      "gerenciar toda evolução Level 602 → 1000+" mencionou também patrimônio
-      e planejamento financeiro; só Equipamentos e Metas ganharam specs
-      concretas até agora. Financeiro já existia no dashboard antigo
-      (entradas/saídas/lucro) — falta decidir se porta como está ou redesenha.
-- [ ] **Hunts do EK** — motor de sugestão priorizando **lucro líquido com o
-      menor gasto possível**. Hoje os dados de hunt (`_HUNT_RAW` no dashboard
-      antigo) não têm campo de custo — precisa desenhar uma estimativa de custo
-      (supplies) por hunt antes de calcular lucro líquido de verdade.
-- [ ] **Bestiary por personagem** — Haxta e Tio Musga têm progressos diferentes;
-      hoje o dado bruto (645 criaturas, `bestiary_raw.txt`) é só uma lista de
-      referência, ainda não há campo de progresso por personagem. Imagens: taxa
-      de acerto testada em 59/60 numa amostra — deve ir bem.
-- [ ] **Quests** — tracker novo (vazio), pronto pra receber a lista que o
-      usuário vai enviar com as quests **já concluídas** de Haxta e Tio Musga.
-- [ ] **MS (Tio Musga)**: aba/seção específica cobrindo PvP e GvG (quando
-      necessário), treino de Magic Level, e hunt em PT — item futuro, o
-      usuário mencionou que ainda não faz isso hoje.
-- [ ] **Bestiary/Quests já concluídos** — usuário vai enviar lista do que já
-      foi feito em cada personagem, pra pré-popular o progresso em vez de
-      começar do zero.
-- [ ] **Armas (Club) + Equipamentos** — existiam no dashboard antigo
-      (`WEAPONS_CLUB`, `EQUIPAMENTOS`), ainda não portados pro Thoth. Taxa de
-      acerto de imagem testada mais baixa pra equipamentos (8/18) — os nomes
-      no dashboard antigo eram estimativas, não bateram exato com a wiki;
-      validar nome real por item quando formos portar.
-- [ ] **Bosstiary** (Bane/Archfoe/Nemesis) — é **diferente** de "Bosses"
-      (que já portamos): Bosstiary é o sistema de progressão de steps do
-      próprio jogo. Existia como lista estática de 20 bosses no dashboard
-      antigo (`_BOSSTIARY_RAW`/`BOSSTIARY_DB`), não portado ainda.
-- [ ] **Renomear pasta `Planilha` → `Hermes`** — bloqueado: o VS Code está
-      com a pasta aberta e trava o rename no Windows. Fazer quando o VS Code
-      não estiver com a pasta aberta.
-- [ ] Ideia mencionada pelo usuário para o futuro: gravar gameplay e cortar
-      vídeos pra redes sociais — reforça que a UI deve ficar visualmente
-      cuidada (tema já aplicado, mas dar atenção a polish visual conforme
-      as abas forem ficando funcionais).
+### Performance de imagens
+- [x] Bug de performance real corrigido: baixar ~1000 imagens sequencialmente
+      travava a tela por minutos. Agora: cache em **disco** (persiste entre
+      execuções) + download em **paralelo** (32 threads) antes de renderizar
+      a tabela. Resultado: 1ª vez ~7s (Bestiary, 645 itens), depois ~0.3s.
 
-## 📋 Auditoria: dashboard web antigo vs Thoth (o que ainda falta portar)
+### Planejamento Estratégico (novo módulo, substitui Equipamentos/Metas soltos)
+- [x] Página única com 3 sub-abas (Ficha / Roadmap / Objetivos) — mantém a UI
+      simples em vez de empilhar tudo, como pedido.
+  - **Ficha**: resumo do personagem + etapa atual do roadmap.
+  - **Roadmap**: timeline editável 602→650→...→1000+, cada etapa com meta
+    financeira/equipamentos/skill/bosses/hunts + checkbox Concluído +
+    progresso calculado automaticamente. Já funciona pro Tio Musga também
+    (campos em branco, editável e salvo, como pedido).
+  - **Objetivos**: Equipamentos (Adicionar/Editar/Excluir/Duplicar/Mover) +
+    Metas (modal "Nova Meta" com Categoria/Prioridade colorida/Data/Valor/
+    Observações), ambos com todos os itens originais pré-cadastrados.
+- [x] ROI: campos capturados (preço/benefício/impacto) — **cálculo de score
+      automático fica pro próximo round** (fazer certo precisa de dados de
+      "benefício" que ainda não coletamos consistentemente).
 
-Seções que existiam no dashboard web antigo e **ainda não têm equivalente**
-no Thoth (nem placeholder no menu):
+### Personagens
+- [x] **Botão "+ Novo Personagem"**: modal com 5 perguntas obrigatórias (nome
+      real do Tibia, vocação, servidor, level atual, foco principal). Cria o
+      personagem no banco com roadmap vazio pronto pra preencher, e o
+      seletor de personagem no topo agora é **dinâmico** (não mais fixo em 2).
+- [x] **Retrato dos personagens**: ícone de outfit real ao lado do nome no
+      seletor. Não existe outfit chamado exatamente "Gold"/"Mage" na
+      TibiaWiki — usei os mais próximos reais disponíveis: **"Knight"**
+      (armadura) pro EK e **"Sorcerer"** (vestes de mago) pro MS/novos
+      personagens por vocação. Se você souber o nome exato do outfit que
+      queria, me diga e eu troco.
 
-- **Dashboard** (visão geral/resumo) — não existe ainda no Thoth.
-- **Financeiro** — controle de entradas/saídas/lucro. Fazia sentido pra 1
-  personagem só; com EK+MS precisa decidir se é por personagem ou geral.
-- **Upgrade Advisor** — sugestão de compra por gold disponível.
-- **Wheel of Destiny** — builds recomendadas por contexto de hunt.
-- **Roadmap 602-1000+** — específico do Haxta antigo (nível 602→1000+);
-  precisa decidir se isso continua fazendo sentido do jeito que era.
-- **Metas/Planejamento** — rotina semanal + metas diárias/semanais/mensais.
-- **Checklist Diário** — lista de tarefas que reseta todo dia.
-- **Transferência** — plano de migração Peloria→Inabra (Haxta); específico
-  do contexto antigo, precisa validar se ainda é relevante.
+### Top Level
+- [x] **Top 20 global + Top 20 por vocação** (não mais só Top 3). Descoberta:
+      a TibiaData API **não filtra highscores por vocação** (só aceita
+      `all`) — contornado buscando a página inteira (até 50 por mundo, que
+      já buscávamos mesmo pra pegar só o #1) e montando os rankings a partir
+      desse mesmo pool, **sem nenhuma requisição a mais**. Filtro por
+      vocação disponível na aba Personagem.
 
-Essas não foram esquecidas — ficam registradas aqui pra decidir prioridade
-com o usuário antes de portar (nem tudo pode fazer sentido no formato EK+MS).
+### Infra / distribuição
+- [x] Ícone (`app/thoth_icon.ico`) + atalho **Thoth.lnk** na área de trabalho
+      (abre sem terminal, via `pythonw.exe`).
+- [x] Repositório GitHub: **https://github.com/rocha5021/Toth_Controle-deProgresso**
+
+## ⏸️ Avaliado e adiado deliberadamente (pedido explícito: só fazer o que gera valor)
+
+- **Relógio digital com animal do Tibia** — decorativo, não ajuda a gerenciar
+  progresso. Não construído a menos que você reforce que quer.
+- **Conversor TibiaCoins → kk** — não existe fonte oficial de cotação (preço
+  de mercado entre jogadores, varia por servidor/dia); exigiria um campo de
+  cotação manual. Baixo valor imediato, fica pro próximo round se você quiser.
+- **Bloco 3 do Planejamento (Patrimônio/Financeiro + gráfico)** — precisa de
+  um modelo de dados novo (gold atual, lucro diário/semanal/mensal) que não
+  existe ainda em lugar nenhum do app — é um subsistema novo, não um ajuste.
+- **Exportar Excel/PDF/JSON e Importar JSON** — fica bem mais simples agora
+  que os dados estão no SQLite (é essencialmente um `SELECT` + serializar).
+  Fica como polish depois que o Planejamento estiver mais maduro.
+- **Dashboard de KPIs e progress bars globais** — depende dos dados do
+  Planejamento estarem mais completos primeiro (senão mostra 0% em tudo).
+
+## 🚧 Pendente (não descartado, só ainda não priorizado)
+
+- [ ] **Hunts do EK** — motor de sugestão priorizando lucro líquido com o
+      menor gasto possível. Precisa desenhar uma estimativa de custo
+      (supplies) por hunt — hoje não existe esse campo em lugar nenhum.
+- [ ] **Quests** — tracker vazio, pronto pra receber a lista que o usuário
+      vai enviar com as quests já concluídas de Haxta e Tio Musga.
+- [ ] **MS (Tio Musga)**: seção específica de PvP/GvG e treino de Magic Level.
+- [ ] **Armas (Club) + Equipamentos gerais** (referência, não confundir com a
+      lista de compras do Planejamento) — existiam no dashboard antigo,
+      ainda não portados.
+- [ ] **Renomear pasta `Planilha` → `Hermes`** — bloqueado: VS Code com a
+      pasta aberta trava o rename no Windows.
+- [ ] Dashboard antigo tinha também: visão geral, Upgrade Advisor, Wheel of
+      Destiny, Checklist Diário, Transferência Peloria→Inabra — específicos
+      do contexto de 1 personagem só; avaliar se ainda fazem sentido no
+      formato multi-personagem antes de portar.
 
 ## 🗑️ Descartado / revertido
 
-- Character Bazaar (Trade) — implementado e depois removido a pedido do usuário.
-- Dashboard web em HTML/JS — não descartado, mas **substituído** como frente
+- Character Bazaar (Trade) — implementado no dashboard web e depois removido
+  a pedido do usuário.
+- Dashboard web em HTML/JS — não descartado, **substituído** como frente
   principal de desenvolvimento; arquivado em `legacy_web_dashboard/`.
+- Persistência em JSON por personagem (`services/storage.py` antigo) —
+  substituída pelo SQLite (`db/` + `repositories/`). `services/storage.py`
+  agora só guarda o cache de dados externos (TibiaData API), que não é
+  "dado do usuário".
 
 ## 🔗 Links e referências técnicas úteis
 
-- TibiaData API (dados reais de personagem/mundos/highscores):
-  `https://api.tibiadata.com/v4/character/<nome>`,
-  `https://api.tibiadata.com/v4/worlds`,
-  `https://api.tibiadata.com/v4/highscores/<mundo>/experience/all/1`
-  — sem API key, mas instável às vezes (502/503 intermitente, já visto na prática).
-- TibiaWiki Brasil (imagens): `https://www.tibiawiki.com.br/wiki/Especial:FilePath/<Arquivo>.gif`
-  redireciona pro arquivo estático real, sem Cloudflare.
-- Bazaar oficial (não usado mais, mas documentado): `https://www.tibia.com/charactertrade/`
-  — atrás de Cloudflare Turnstile, só acessível via Chromium headless (Playwright).
+- TibiaData API: `https://api.tibiadata.com/v4/character/<nome>`,
+  `.../v4/worlds`, `.../v4/highscores/<mundo>/experience/all/1` — sem API
+  key, mas instável às vezes (502/503 intermitente, visto na prática).
+  **Não filtra por vocação** (só `all`) — contornado, ver Top Level acima.
+- TibiaWiki Brasil (imagens de itens/criaturas): link direto via
+  `.../wiki/Especial:FilePath/<Arquivo>.gif`, sem Cloudflare.
+- TibiaWiki Bosstiário (roster completo de bosses): página única com 3
+  tabelas (Bane/Archfoe/Nemesis), imagem já embutida no HTML de cada linha.
 - Repositório do Thoth: `https://github.com/rocha5021/Toth_Controle-deProgresso`
 
 ## Pastas do projeto
 
-- `Planilha/legacy_web_dashboard/` — dashboard web antigo (HTML/CSS/JS +
-  gerador Python + servidor Flask), arquivado, intacto.
+- `Planilha/legacy_web_dashboard/` — dashboard web antigo, arquivado, intacto.
 - `Planilha/Thoth/` — app novo, em desenvolvimento ativo (também no GitHub).
 - `Planilha/EK_Management_System.xlsx` — planilha original, na raiz.
-- Pendente renomear `Planilha/` → `Hermes/` (bloqueado pelo VS Code, ver acima).
+- Pendente renomear `Planilha/` → `Hermes/` (bloqueado pelo VS Code).
+
+## Nota sobre verificação visual
+
+A automação de clique via UI Automation (Windows) se mostrou instável nesta
+máquina — já derrubou o app algumas vezes durante testes (sem relação com
+bugs reais do app: os mesmos fluxos passam limpos em testes headless). Por
+isso a prática desta sessão foi: validar tudo primeiro sem interface
+(`QT_QPA_PLATFORM=offscreen`), e usar screenshot real só como confirmação
+leve final, sem insistir em automação de clique quando ela mesma trava.

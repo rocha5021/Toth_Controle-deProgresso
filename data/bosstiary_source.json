@@ -1,0 +1,2522 @@
+[
+  {
+    "nome": "Adlerauge",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f3/Adlerauge.gif",
+    "hp": "45000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Annihilon",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/8/83/Annihilon.gif",
+    "hp": "46500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Arthei",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/01/Arthei.gif",
+    "hp": "4200",
+    "exp": "4000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ashmunrah",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/4/48/Ashmunrah.gif",
+    "hp": "5000",
+    "exp": "3100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Atab",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/00/Atab.gif",
+    "hp": "8100",
+    "exp": "6800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Black Knight",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ef/Black_Knight.gif",
+    "hp": "1800",
+    "exp": "1600",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Boogey",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4e/Boogey.gif",
+    "hp": "930",
+    "exp": "475",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Boreth",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ca/Boreth.gif",
+    "hp": "1400",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bragrumol",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b0/Bragrumol.gif",
+    "hp": "38000",
+    "exp": "18000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bullwark",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/ae/Bullwark.gif",
+    "hp": "72000",
+    "exp": "22000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Chopper",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8a/Chopper.gif",
+    "hp": "7200",
+    "exp": "5400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Clavius",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/7/73/Clavius.gif",
+    "hp": "40000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Custodian",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/d/db/Custodian.gif",
+    "hp": "47000",
+    "exp": "27500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dazed Leaf Golem",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/00/Dazed_Leaf_Golem.gif",
+    "hp": "10000",
+    "exp": "8000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Death Priest Shargon",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0d/Death_Priest_Shargon.gif",
+    "hp": "65000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Deep Terror",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/d/dc/Deep_Terror.gif",
+    "hp": "100000",
+    "exp": "30000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dipthrah",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9f/Dipthrah.gif",
+    "hp": "4200",
+    "exp": "2900",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dirtbeard",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0f/Dirtbeard.gif",
+    "hp": "630",
+    "exp": "375",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Diseased Bill",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/34/Diseased_Bill.gif",
+    "hp": "1000",
+    "exp": "300",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Diseased Dan",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3f/Diseased_Dan.gif",
+    "hp": "800",
+    "exp": "300",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Diseased Fred",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f8/Diseased_Fred.gif",
+    "hp": "1100",
+    "exp": "300",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Doctor Perhaps",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/31/Doctor_Perhaps.gif",
+    "hp": "475",
+    "exp": "325",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Enusat The Onyx Wing",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3b/Enusat_The_Onyx_Wing.gif",
+    "hp": "25000",
+    "exp": "21500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Evil Mastermind",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/39/Evil_Mastermind.gif",
+    "hp": "1295",
+    "exp": "675",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Fleshslicer",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c9/Fleshslicer.gif",
+    "hp": "5700",
+    "exp": "5500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gaffir",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/cb/Gaffir.gif",
+    "hp": "48000",
+    "exp": "25000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Glitterscale",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/d/da/Glitterscale.gif",
+    "hp": "1111",
+    "exp": "700",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Glooth Fairy",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/ba/Glooth_Fairy.gif",
+    "hp": "59000",
+    "exp": "19000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Golgordan",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/ad/Golgordan.gif",
+    "hp": "23750",
+    "exp": "8500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gorga",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a0/Gorga.gif",
+    "hp": "15000",
+    "exp": "13000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gralvalon",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/5/58/Gralvalon.gif",
+    "hp": "33000",
+    "exp": "24000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grand Canon Dominus",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/ae/Grand_Canon_Dominus.gif",
+    "hp": "15000",
+    "exp": "11000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grand Chaplain Gaunder",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2b/Grand_Chaplain_Gaunder.gif",
+    "hp": "18000",
+    "exp": "14000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grand Commander Soeren",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2e/Grand_Commander_Soeren.gif",
+    "hp": "17000",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Guard Captain Quaid",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e5/Guard_Captain_Quaid.gif",
+    "hp": "55000",
+    "exp": "28000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Hellgorak",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f4/Hellgorak.gif",
+    "hp": "25850",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Heoni",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fd/Heoni.gif",
+    "hp": "900",
+    "exp": "515",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Herald of Fire",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8f/Herald_of_Fire.gif",
+    "hp": "900",
+    "exp": "1350",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Inkwing",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/9/99/Inkwing.gif",
+    "hp": "12000",
+    "exp": "17500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Jailer",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/26/Jailer.gif",
+    "hp": "65",
+    "exp": "45",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Jaul",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/8/84/Jaul.gif",
+    "hp": "90000",
+    "exp": "30000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Kroazur",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6f/Kroazur.gif",
+    "hp": "3000",
+    "exp": "2700",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Latrivan",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6b/Latrivan.gif",
+    "hp": "23750",
+    "exp": "8500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lersatio",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/08/Lersatio.gif",
+    "hp": "1600",
+    "exp": "2500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lisa",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b9/Lisa.gif",
+    "hp": "55000",
+    "exp": "18000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mad Mage",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2f/Mad_Mage.gif",
+    "hp": "2500",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Madareth",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3a/Madareth.gif",
+    "hp": "33500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mahrdis",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b1/Mahrdis.gif",
+    "hp": "3900",
+    "exp": "3050",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Marziel",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/1/14/Marziel.gif",
+    "hp": "1900",
+    "exp": "3000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Maw",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/cb/Maw.gif",
+    "hp": "8200",
+    "exp": "6500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mephiles",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/8/88/Mephiles.gif",
+    "hp": "415",
+    "exp": "415",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Michael the Stalwart",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/23/Michael_the_Stalwart.gif",
+    "hp": "60000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mindmasher",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c6/Mindmasher.gif",
+    "hp": "9500",
+    "exp": "6000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Monstor",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1b/Monstor.gif",
+    "hp": "800",
+    "exp": "575",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Morguthis",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/bf/Morguthis.gif",
+    "hp": "4800",
+    "exp": "3000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mozradek",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a3/Mozradek.gif",
+    "hp": "28000",
+    "exp": "21000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Obujos",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/01/Obujos.gif",
+    "hp": "35000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Omruc",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fd/Omruc.gif",
+    "hp": "4300",
+    "exp": "2950",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Overseer Osverger",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e9/Overseer_Osverger.gif",
+    "hp": "75000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Preceptor Lazare",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/29/Preceptor_Lazare.gif",
+    "hp": "15000",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Professor Maxxen",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7c/Professor_Maxxen.gif",
+    "hp": "90000",
+    "exp": "15500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rahemos",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b7/Rahemos.gif",
+    "hp": "3700",
+    "exp": "3100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rakesh Moonfang",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/26/Rakesh_Moonfang.gif",
+    "hp": "25500",
+    "exp": "25500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rotspit",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/5/59/Rotspit.gif",
+    "hp": "6800",
+    "exp": "5800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Shadowstalker",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2f/Shadowstalker.gif",
+    "hp": "6100",
+    "exp": "4200",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sir Leonard",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/7/74/Sir_Leonard.gif",
+    "hp": "22000",
+    "exp": "26000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sugar Daddy",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/27/Sugar_Daddy.gif",
+    "hp": "9500",
+    "exp": "15550",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sugar Mommy",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a1/Sugar_Mommy.gif",
+    "hp": "6000",
+    "exp": "6800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tanjis",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/6/67/Tanjis.gif",
+    "hp": "25000",
+    "exp": "14500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Thalas",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a9/Thalas.gif",
+    "hp": "4100",
+    "exp": "2950",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Thawing Dragon Lord",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ca/Thawing_Dragon_Lord.gif",
+    "hp": "25000",
+    "exp": "2100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Baron from Below",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d6/The_Baron_from_Below.gif",
+    "hp": "350000",
+    "exp": "300000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Count Of The Core",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c1/The_Count_Of_The_Core.gif",
+    "hp": "50000?",
+    "exp": "300000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Duke Of The Depths",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c8/The_Duke_Of_The_Depths.gif",
+    "hp": "350000",
+    "exp": "300000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Lord of the Lice",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2b/The_Lord_of_the_Lice.gif",
+    "hp": "80000",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Ravager",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7a/The_Ravager.gif",
+    "hp": "53500",
+    "exp": "14980",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Shatterer",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/5/56/The_Shatterer.gif",
+    "hp": "80000",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Twisterror",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/0/08/Twisterror.gif",
+    "hp": "35000",
+    "exp": "25000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ushuriel",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/6/68/Ushuriel.gif",
+    "hp": "31500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Vashresamun",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4b/Vashresamun.gif",
+    "hp": "4000",
+    "exp": "2950",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Xogixath",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/2/22/Xogixath.gif",
+    "hp": "35000",
+    "exp": "22000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zugurosh",
+    "tier": "Bane",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c2/Zugurosh.gif",
+    "hp": "52500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Abyssador",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/13/Abyssador.gif",
+    "hp": "350000",
+    "exp": "400000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Adventurer Group",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/70/Adventurer_Group.gif",
+    "hp": "1025000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ahau",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2b/Ahau.gif",
+    "hp": "9000",
+    "exp": "17500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Amenef The Burning",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fb/Amenef_The_Burning.gif",
+    "hp": "26000",
+    "exp": "21500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ancient Spawn of Morgathla",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0b/Ancient_Spawn_of_Morgathla.gif",
+    "hp": "900000",
+    "exp": "70000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Anomaly",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9a/Anomaly.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Arbaziloth",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f0/Arbaziloth.gif",
+    "hp": "360000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ayana the Crimson Curse",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8d/Ayana_the_Crimson_Curse.gif",
+    "hp": "17000",
+    "exp": "12400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bibby Bloodbath",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/13/Bibby_Bloodbath.gif",
+    "hp": "1200",
+    "exp": "1500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Black Vixen",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/92/Black_Vixen.gif",
+    "hp": "3200",
+    "exp": "3200",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Blight Mariner",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/cf/Blight_Mariner.gif",
+    "hp": "16500",
+    "exp": "25500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bloodback",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/5/56/Bloodback.gif",
+    "hp": "5200",
+    "exp": "4000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bone Overlord",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0d/Bone_Overlord.gif",
+    "hp": "0",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Brain Head",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4e/Brain_Head.gif",
+    "hp": "230000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Brokul",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ea/Brokul.gif",
+    "hp": "50000",
+    "exp": "23000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Chagorz",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/10/Chagorz.gif",
+    "hp": "?",
+    "exp": "3250000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Count Vlarkorth",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c7/Count_Vlarkorth.gif",
+    "hp": "300000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Court Warlock",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a9/Court_Warlock.gif",
+    "hp": "120000",
+    "exp": "147000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Darkfang",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c6/Darkfang.gif",
+    "hp": "4800",
+    "exp": "4000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Deathstrike",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/be/Deathstrike.gif",
+    "hp": "250000",
+    "exp": "400000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Despor",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3c/Despor.gif",
+    "hp": "50000",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Drume",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f2/Drume.gif",
+    "hp": "35000",
+    "exp": "25000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Duke Krule",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0e/Duke_Krule.gif",
+    "hp": "290000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Earl Osam",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/de/Earl_Osam.gif",
+    "hp": "300000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ekatrix",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/17/Ekatrix.gif",
+    "hp": "500",
+    "exp": "200",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Eldritch Dragon Lord",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/2/21/Eldritch_Dragon_Lord.gif",
+    "hp": "0",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Eradicator",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f1/Eradicator.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Essence Of Malice",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/13/Essence_Of_Malice.gif",
+    "hp": "250000",
+    "exp": "150000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Faceless Bane",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a0/Faceless_Bane.gif",
+    "hp": "35000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gelidrazah the Frozen",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9e/Gelidrazah_the_Frozen.gif",
+    "hp": "10000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ghulosh",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e7/Ghulosh.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gnomevil",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/34/Gnomevil.gif",
+    "hp": "250000",
+    "exp": "400000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gorzindel",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/2/26/Gorzindel.gif",
+    "hp": "350000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Cruelty",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b3/Goshnar%27s_Cruelty.gif",
+    "hp": "550000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Greed",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a4/Goshnar%27s_Greed.gif",
+    "hp": "550000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Hatred",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/5/58/Goshnar%27s_Hatred.gif",
+    "hp": "550000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Malice",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d5/Goshnar%27s_Malice.gif",
+    "hp": "550000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Spite",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6c/Goshnar%27s_Spite.gif",
+    "hp": "550000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grand Master Oberon",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/49/Grand_Master_Oberon.gif",
+    "hp": "30000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ice Horror",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/95/Ice_Horror.gif",
+    "hp": "542700",
+    "exp": "259000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ichgahal",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/14/Ichgahal.gif",
+    "hp": "?",
+    "exp": "3250000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Irgix the Flimsy",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1f/Irgix_the_Flimsy.gif",
+    "hp": "24000",
+    "exp": "18000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Kalyassa",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/12/Kalyassa.gif",
+    "hp": "10000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Katex Blood Tongue",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6f/Katex_Blood_Tongue.gif",
+    "hp": "6300",
+    "exp": "5000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "King Zelos",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/40/King_Zelos.gif",
+    "hp": "480000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Kusuma",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c0/Kusuma.gif",
+    "hp": "4850",
+    "exp": "9380",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lady Tenebris",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a9/Lady_Tenebris.gif",
+    "hp": "250000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lloyd",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/dd/Lloyd.gif",
+    "hp": "65000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lokathmor",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fb/Lokathmor.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lord Azaram",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a6/Lord_Azaram.gif",
+    "hp": "300000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lord of the Elements",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/60/Lord_of_the_Elements.gif",
+    "hp": "8000",
+    "exp": "8000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lord Retro",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8c/Lord_Retro.gif",
+    "hp": "2500",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Magma Bubble",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c7/Magma_Bubble.gif",
+    "hp": "150000",
+    "exp": "80.000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Maior Domus",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f9/Maior_Domus.gif",
+    "hp": "0",
+    "exp": "3500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mawhawk",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a8/Mawhawk.gif",
+    "hp": "45000",
+    "exp": "14000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mazoran",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b4/Mazoran.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mazzinor",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f7/Mazzinor.gif",
+    "hp": "350000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Megasylvan Yselda",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6b/Megasylvan_Yselda.gif",
+    "hp": "32000",
+    "exp": "19900",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Melting Frozen Horror",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e4/Melting_Frozen_Horror.gif",
+    "hp": "70000",
+    "exp": "65000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mimar Haffar",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d5/Mimar_Haffar.gif",
+    "hp": "0",
+    "exp": "3500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mitmah Vanguard",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9b/Mitmah_Vanguard.gif",
+    "hp": "50000",
+    "exp": "300000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Murcion",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/eb/Murcion.gif",
+    "hp": "?",
+    "exp": "3250000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Neferi The Spy",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/bf/Neferi_The_Spy.gif",
+    "hp": "28000",
+    "exp": "19650",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Outburst",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/36/Outburst.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Owin (Criatura)",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6a/Owin_%28Criatura%29.gif",
+    "hp": "4800?",
+    "exp": "5000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Plagirath",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fd/Plagirath.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ragiaz",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/75/Ragiaz.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Raging Mage",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/90/Raging_Mage.gif",
+    "hp": "3500",
+    "exp": "3250",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ratmiral Blackwhiskers",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/72/Ratmiral_Blackwhiskers.gif",
+    "hp": "220000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ravenous Hunger",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4f/Ravenous_Hunger.gif",
+    "hp": "190000",
+    "exp": "615",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Razzagorn",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/db/Razzagorn.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Realityquake",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/5/54/Realityquake.gif",
+    "hp": "110000",
+    "exp": "32000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rupture",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/12/Rupture.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Scarlett Etzel",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/41/Scarlett_Etzel.gif",
+    "hp": "30000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Shadowpelt",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/37/Shadowpelt.gif",
+    "hp": "6000",
+    "exp": "4600",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sharpclaw",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/15/Sharpclaw.gif",
+    "hp": "3300",
+    "exp": "3000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Shulgrax",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/34/Shulgrax.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sir Baeloc",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/de/Sir_Baeloc.gif",
+    "hp": "150000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sir Nictros",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/73/Sir_Nictros.gif",
+    "hp": "150000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sister Hetai",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/2/27/Sister_Hetai.gif",
+    "hp": "25000",
+    "exp": "20500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Soul of Dragonking Zyrtarch",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/93/Soul_of_Dragonking_Zyrtarch.gif",
+    "hp": "60000+?",
+    "exp": "70780?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Srezz Yellow Eyes",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c9/Srezz_Yellow_Eyes.gif",
+    "hp": "6200",
+    "exp": "4800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tamru the Black",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/5/55/Tamru_the_Black.gif",
+    "hp": "15500",
+    "exp": "16800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tarbaz",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0e/Tarbaz.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tazhadur",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d2/Tazhadur.gif",
+    "hp": "10000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tentugly's Head",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0d/Tentugly%27s_Head.gif",
+    "hp": "75000",
+    "exp": "40000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Thaian",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/02/Thaian.gif",
+    "hp": "50000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Blazing Rose",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0b/The_Blazing_Rose.gif",
+    "hp": "18000",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Brainstealer",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/05/The_Brainstealer.gif",
+    "hp": "300000",
+    "exp": "72000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Diamond Blossom",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/33/The_Diamond_Blossom.gif",
+    "hp": "20000",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Dread Maiden",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d5/The_Dread_Maiden.gif",
+    "hp": "300000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Enraged Thorn Knight",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/dd/The_Enraged_Thorn_Knight.gif",
+    "hp": "90000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The False God",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ec/The_False_God.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Fear Feaster",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/74/The_Fear_Feaster.gif",
+    "hp": "290000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Flaming Orchid",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0d/The_Flaming_Orchid.gif",
+    "hp": "4000",
+    "exp": "8500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Gravedigger",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2f/The_Gravedigger.gif",
+    "hp": "0",
+    "exp": "0",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Lily Of Night",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ec/The_Lily_Of_Night.gif",
+    "hp": "19000",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Mega Magmaoid",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3f/The_Mega_Magmaoid.gif",
+    "hp": "104000",
+    "exp": "80000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Monster",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3d/The_Monster.gif",
+    "hp": "?",
+    "exp": "30000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Moonlight Aster",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7e/The_Moonlight_Aster.gif",
+    "hp": "4500",
+    "exp": "9250",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Moonsnow Magnolia",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/5/57/The_Moonsnow_Magnolia.gif",
+    "hp": "60000",
+    "exp": "240000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Nightmare Beast",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a3/The_Nightmare_Beast.gif",
+    "hp": "550000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Pale Worm",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9e/The_Pale_Worm.gif",
+    "hp": "420000?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Rootkraken",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/72/The_Rootkraken.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Sandking",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/79/The_Sandking.gif",
+    "hp": "?",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Scourge of Oblivion",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/43/The_Scourge_of_Oblivion.gif",
+    "hp": "650000",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Souldespoiler",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/d/dc/The_Souldespoiler.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Source Of Corruption",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/95/The_Source_Of_Corruption.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Time Guardian",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f6/The_Time_Guardian.gif",
+    "hp": "290000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Unarmored Voidborn",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/03/The_Unarmored_Voidborn.gif",
+    "hp": "250000",
+    "exp": "15000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Unwelcome",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/bf/The_Unwelcome.gif",
+    "hp": "∞",
+    "exp": "--",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Winter Bloom",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/76/The_Winter_Bloom.gif",
+    "hp": "4750",
+    "exp": "9250",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Timira the Many-Headed",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/eb/Timira_the_Many-Headed.gif",
+    "hp": "75000",
+    "exp": "35000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tropical Desolator",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/1/13/Tropical_Desolator.gif",
+    "hp": "20500",
+    "exp": "23000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Unaz the Mean",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6e/Unaz_the_Mean.gif",
+    "hp": "28000",
+    "exp": "22000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Urmahlullu the Weakened",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0d/Urmahlullu_the_Weakened.gif",
+    "hp": "500000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Utua Stone Sting",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e8/Utua_Stone_Sting.gif",
+    "hp": "6400",
+    "exp": "5100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Vemiath",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8e/Vemiath.gif",
+    "hp": "?",
+    "exp": "3250000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Vladrukh",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9e/Vladrukh.gif",
+    "hp": "390000",
+    "exp": "450000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Vok the Freakish",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4b/Vok_the_Freakish.gif",
+    "hp": "32000",
+    "exp": "27000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Wrathful Archivist",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9d/Wrathful_Archivist.gif",
+    "hp": "15000",
+    "exp": "24000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Yirkas Blue Scales",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/7/73/Yirkas_Blue_Scales.gif",
+    "hp": "6300",
+    "exp": "4900",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zamulosh",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b1/Zamulosh.gif",
+    "hp": "290000",
+    "exp": "500000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zorvorax",
+    "tier": "Archfoe",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3f/Zorvorax.gif",
+    "hp": "10000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Alptramun",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c9/Alptramun.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Anmothra",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d2/Anmothra.gif",
+    "hp": "7500",
+    "exp": "15000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Arachir the Ancient One",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c3/Arachir_the_Ancient_One.gif",
+    "hp": "1700",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Arthom the Hunter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/95/Arthom_the_Hunter.gif",
+    "hp": "500",
+    "exp": "550",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bakragore",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/55/Bakragore.gif",
+    "hp": "?",
+    "exp": "15000000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Bane Lord",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6e/Bane_Lord.gif",
+    "hp": "3000",
+    "exp": "500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Barbaria",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/88/Barbaria.gif",
+    "hp": "345",
+    "exp": "355",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Battlemaster Zunzu",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1d/Battlemaster_Zunzu.gif",
+    "hp": "4000",
+    "exp": "2500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Big Boss Trolliver",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3f/Big_Boss_Trolliver.gif",
+    "hp": "140",
+    "exp": "105",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Burster",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/6/6f/Burster.gif",
+    "hp": "?",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Captain Jones",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/54/Captain_Jones.gif",
+    "hp": "555",
+    "exp": "620",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Chikhaton",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/aa/Chikhaton.gif",
+    "hp": "130000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Chizzoron the Distorter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fa/Chizzoron_the_Distorter.gif",
+    "hp": "16000",
+    "exp": "4000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Countess Sorrow",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/16/Countess_Sorrow.gif",
+    "hp": "6500",
+    "exp": "13000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Cublarc the Plunderer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/53/Cublarc_the_Plunderer.gif",
+    "hp": "400",
+    "exp": "400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Devovorga",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/4/40/Devovorga.gif",
+    "hp": "500000",
+    "exp": "100000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dharalion",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ed/Dharalion.gif",
+    "hp": "390",
+    "exp": "380",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Diblis the Fair",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0f/Diblis_the_Fair.gif",
+    "hp": "1500",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dracola",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/53/Dracola.gif",
+    "hp": "16000",
+    "exp": "15000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dreadful Disruptor",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/09/Dreadful_Disruptor.gif",
+    "hp": "27000",
+    "exp": "14000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Dreadmaw",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7f/Dreadmaw.gif",
+    "hp": "3500",
+    "exp": "2700",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Elvira Hammerthrust",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/fa/Elvira_Hammerthrust.gif",
+    "hp": "245",
+    "exp": "165",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Feroxa (Mortal)",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/ec/Feroxa_%28Mortal%29.gif",
+    "hp": "150000?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ferumbras",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0f/Ferumbras.gif",
+    "hp": "90000",
+    "exp": "12000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ferumbras Mortal Shell",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f1/Ferumbras_Mortal_Shell.gif",
+    "hp": "300000",
+    "exp": "2000000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Flamecaller Zazrak",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8d/Flamecaller_Zazrak.gif",
+    "hp": "2690",
+    "exp": "3100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Fleabringer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1c/Fleabringer.gif",
+    "hp": "265",
+    "exp": "100",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Foreman Kneebiter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/4/46/Foreman_Kneebiter.gif",
+    "hp": "570",
+    "exp": "445",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Furyosa",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e1/Furyosa.gif",
+    "hp": "25000",
+    "exp": "11500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gaz'Haragoth",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/6/63/Gaz%27Haragoth.gif",
+    "hp": "350000",
+    "exp": "1000000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "General Murius",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0b/General_Murius.gif",
+    "hp": "550",
+    "exp": "450",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ghazbaran",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/5e/Ghazbaran.gif",
+    "hp": "60000",
+    "exp": "15000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Goshnar's Megalomania",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ce/Goshnar%27s_Megalomania.gif",
+    "hp": "?",
+    "exp": "75000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grand Mother Foulscale",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8e/Grand_Mother_Foulscale.gif",
+    "hp": "1850",
+    "exp": "1400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grandfather Tridian",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b4/Grandfather_Tridian.gif",
+    "hp": "1800",
+    "exp": "1400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Gravelord Oshuran",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/75/Gravelord_Oshuran.gif",
+    "hp": "2000",
+    "exp": "2400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Groam",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e0/Groam.gif",
+    "hp": "400",
+    "exp": "180",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Grorlam",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/92/Grorlam.gif",
+    "hp": "2700",
+    "exp": "2400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Hairman The Huge",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8a/Hairman_The_Huge.gif",
+    "hp": "600",
+    "exp": "335",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Hatebreeder",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/33/Hatebreeder.gif",
+    "hp": "18000",
+    "exp": "11000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "High Templar Cobrass",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1f/High_Templar_Cobrass.gif",
+    "hp": "410",
+    "exp": "515",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Hirintror",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/93/Hirintror.gif",
+    "hp": "1500",
+    "exp": "800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Horestis",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c3/Horestis.gif",
+    "hp": "6000",
+    "exp": "3500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Irahsae",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/55/Irahsae.gif",
+    "hp": "45000",
+    "exp": "25000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Izcandar Champion of Summer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c3/Izcandar_Champion_of_Summer.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Izcandar Champion of Winter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/53/Izcandar_Champion_of_Winter.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Izcandar the Banished",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0f/Izcandar_the_Banished.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Jesse the Wicked",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c6/Jesse_the_Wicked.gif",
+    "hp": "280",
+    "exp": "180",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "King Chuck",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/2/2d/King_Chuck.gif",
+    "hp": "∞",
+    "exp": "--",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Lizard Gate Guardian",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e2/Lizard_Gate_Guardian.gif",
+    "hp": "5000",
+    "exp": "2500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mahatheb",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/0a/Mahatheb.gif",
+    "hp": "645",
+    "exp": "600",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Malofur Mangrinder",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3b/Malofur_Mangrinder.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Man In The Cave",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/93/Man_In_The_Cave.gif",
+    "hp": "485",
+    "exp": "770",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Massacre",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/9d/Massacre.gif",
+    "hp": "30000",
+    "exp": "20000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Maxxenius",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4c/Maxxenius.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Morgaroth",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ce/Morgaroth.gif",
+    "hp": "55000",
+    "exp": "15000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mornenion",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/84/Mornenion.gif",
+    "hp": "190",
+    "exp": "115",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Morshabaal",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ca/Morshabaal.gif",
+    "hp": "1000000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Mr. Punish",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/3f/Mr._Punish.gif",
+    "hp": "10000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Ocyakao",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/85/Ocyakao.gif",
+    "hp": "700",
+    "exp": "665",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Omrafir",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/e/e5/Omrafir.gif",
+    "hp": "200000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Oodok Witchmaster",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8c/Oodok_Witchmaster.gif",
+    "hp": "450",
+    "exp": "550",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Orshabaal",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ce/Orshabaal.gif",
+    "hp": "22500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Phosphorus",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/16/Phosphorus.gif",
+    "hp": "0",
+    "exp": "16000000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Phrodomo",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/cc/Phrodomo.gif",
+    "hp": "150000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Plagueroot",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/2/24/Plagueroot.gif",
+    "hp": "320000",
+    "exp": "55000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Raxias",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/15/Raxias.gif",
+    "hp": "1100",
+    "exp": "900",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Robby the Reckless",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d7/Robby_the_Reckless.gif",
+    "hp": "155",
+    "exp": "110",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rotrender",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/38/Rotrender.gif",
+    "hp": "12000000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rotworm Queen",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/be/Rotworm_Queen.gif",
+    "hp": "105",
+    "exp": "75",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Rukor Zad",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/03/Rukor_Zad.gif",
+    "hp": "380",
+    "exp": "380",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Shlorg",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f2/Shlorg.gif",
+    "hp": "10000",
+    "exp": "6500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sir Leopold",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f6/Sir_Leopold.gif",
+    "hp": "18000",
+    "exp": "26000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Sir Valorcrest",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/32/Sir_Valorcrest.gif",
+    "hp": "1600",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Smuggler Baron Silvertoe",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/d/da/Smuggler_Baron_Silvertoe.gif",
+    "hp": "280",
+    "exp": "170",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Teneshpar",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/96/Teneshpar.gif",
+    "hp": "20000",
+    "exp": "18000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Abomination",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a7/The_Abomination.gif",
+    "hp": "?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Big Bad One",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a1/The_Big_Bad_One.gif",
+    "hp": "300",
+    "exp": "170",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Blightfather",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/0/02/The_Blightfather.gif",
+    "hp": "400",
+    "exp": "400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Evil Eye",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/93/The_Evil_Eye.gif",
+    "hp": "1100",
+    "exp": "750",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The First Dragon (Criatura)",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/bf/The_First_Dragon_%28Criatura%29.gif",
+    "hp": "220000?",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Frog Prince",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/d/d0/The_Frog_Prince.gif",
+    "hp": "55",
+    "exp": "1",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Handmaiden",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/73/The_Handmaiden.gif",
+    "hp": "19500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Hungerer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/ce/The_Hungerer.gif",
+    "hp": "2000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Imperor",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b3/The_Imperor.gif",
+    "hp": "4750",
+    "exp": "10500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Last Lore Keeper",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/33/The_Last_Lore_Keeper.gif",
+    "hp": "500000",
+    "exp": "45000?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Manhunter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/3/36/The_Manhunter.gif",
+    "hp": "4500",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Mean Masher",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/16/The_Mean_Masher.gif",
+    "hp": "8000",
+    "exp": "?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Mutated Pumpkin",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7b/The_Mutated_Pumpkin.gif",
+    "hp": "500000",
+    "exp": "30000?",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Old Whopper",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/c/c6/The_Old_Whopper.gif",
+    "hp": "785",
+    "exp": "750",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Pale Count",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/11/The_Pale_Count.gif",
+    "hp": "25000?",
+    "exp": "28000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Percht Queen",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/71/The_Percht_Queen.gif",
+    "hp": "2300",
+    "exp": "500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Plasmother",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/9/98/The_Plasmother.gif",
+    "hp": "7350",
+    "exp": "12000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Voice of Ruin",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/8/8b/The_Voice_of_Ruin.gif",
+    "hp": "5500",
+    "exp": "3500",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "The Welter",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a3/The_Welter.gif",
+    "hp": "25000",
+    "exp": "11000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tyrn",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/7/7c/Tyrn.gif",
+    "hp": "12000",
+    "exp": "6900",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Tzumrah the Dazzler",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/5/51/Tzumrah_the_Dazzler.gif",
+    "hp": "2100",
+    "exp": "1700",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Warlord Ruzad",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/4/4f/Warlord_Ruzad.gif",
+    "hp": "2500",
+    "exp": "1700",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "White Pale",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/ab/White_Pale.gif",
+    "hp": "500",
+    "exp": "390",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Willi Wasp",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/f/f1/Willi_Wasp.gif",
+    "hp": "250",
+    "exp": "250",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "World Devourer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/a/a8/World_Devourer.gif",
+    "hp": "500000",
+    "exp": "50000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Xenia",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/1f/Xenia.gif",
+    "hp": "200",
+    "exp": "255",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Yaga the Crone",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/2/25/Yaga_the_Crone.gif",
+    "hp": "620",
+    "exp": "375",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Yakchal",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/4/41/Yakchal.gif",
+    "hp": "5750",
+    "exp": "4400",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zarabustor",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b0/Zarabustor.gif",
+    "hp": "5100",
+    "exp": "8000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zevelon Duskbringer",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/1/15/Zevelon_Duskbringer.gif",
+    "hp": "1400",
+    "exp": "1800",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zomba",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/bb/Zomba.gif",
+    "hp": "300",
+    "exp": "300",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zulazza the Corruptor",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/ba/Zulazza_the_Corruptor.gif",
+    "hp": "46500",
+    "exp": "10000",
+    "dificuldade": "‐‐"
+  },
+  {
+    "nome": "Zushuka",
+    "tier": "Nemesis",
+    "image_url": "https://www.tibiawiki.com.br/images/b/b5/Zushuka.gif",
+    "hp": "15000",
+    "exp": "9000",
+    "dificuldade": "‐‐"
+  }
+]

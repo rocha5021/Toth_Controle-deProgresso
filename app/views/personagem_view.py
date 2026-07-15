@@ -7,8 +7,11 @@ from datetime import datetime, timezone
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QFrame,
-    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView, QSizePolicy,
+    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView, QSizePolicy, QComboBox,
 )
+
+
+TODAS_VOCACOES = "Todas as vocações"
 
 
 def _time_ago(epoch_seconds):
@@ -88,10 +91,17 @@ class PersonagemView(QWidget):
         self.deaths_label.setWordWrap(True)
         root.addWidget(self.deaths_label)
 
-        top_header = QLabel("Top 3 Level do Tibia (todos os servidores)")
+        top_header_row = QHBoxLayout()
+        top_header_row.setContentsMargins(0, 22, 0, 0)
+        top_header = QLabel("Top 20 Level do Tibia (todos os servidores)")
         top_header.setObjectName("PanelHeader")
-        top_header.setStyleSheet("margin-top: 22px;")
-        root.addWidget(top_header)
+        top_header_row.addWidget(top_header)
+        top_header_row.addStretch()
+        self.vocation_filter = QComboBox()
+        self.vocation_filter.addItem(TODAS_VOCACOES)
+        self.vocation_filter.currentTextChanged.connect(self._render_top_table)
+        top_header_row.addWidget(self.vocation_filter)
+        root.addLayout(top_header_row)
 
         self.top_table = QTableWidget(0, 4)
         self.top_table.setHorizontalHeaderLabels(["Personagem", "Level", "Vocacao", "Mundo"])
@@ -99,7 +109,7 @@ class PersonagemView(QWidget):
         self.top_table.verticalHeader().setVisible(False)
         self.top_table.setEditTriggers(QTableWidget.NoEditTriggers)
         self.top_table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        self.top_table.setMaximumHeight(150)
+        self.top_table.setMaximumHeight(420)
         root.addWidget(self.top_table)
 
         root.addStretch()
@@ -171,7 +181,28 @@ class PersonagemView(QWidget):
         updated_at = self._latest_payload.get("updated_at")
         self.updated_label.setText(f"Atualizado {_time_ago(updated_at)}")
 
-        top_levels = self._latest_payload.get("top_levels", [])
+        by_vocation = self._latest_payload.get("top_levels_by_vocation", {})
+        current_selection = self.vocation_filter.currentText()
+        self.vocation_filter.blockSignals(True)
+        self.vocation_filter.clear()
+        self.vocation_filter.addItem(TODAS_VOCACOES)
+        for voc in sorted(by_vocation.keys()):
+            self.vocation_filter.addItem(voc)
+        idx = self.vocation_filter.findText(current_selection)
+        self.vocation_filter.setCurrentIndex(idx if idx >= 0 else 0)
+        self.vocation_filter.blockSignals(False)
+
+        self._render_top_table()
+
+    def _render_top_table(self):
+        if not self._latest_payload:
+            return
+        selection = self.vocation_filter.currentText()
+        if selection and selection != TODAS_VOCACOES:
+            top_levels = self._latest_payload.get("top_levels_by_vocation", {}).get(selection, [])
+        else:
+            top_levels = self._latest_payload.get("top_levels", [])
+
         self.top_table.setRowCount(len(top_levels))
         for row, entry in enumerate(top_levels):
             self.top_table.setItem(row, 0, QTableWidgetItem(entry.get("name", "-")))

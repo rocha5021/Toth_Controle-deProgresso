@@ -1,53 +1,58 @@
 """
-Dados de referencia (bosses, charms) portados do dashboard web anterior
-(legacy_web_dashboard/ek_management_system/data.py). Sao dados estimados
-de planejamento - o texto do dashboard antigo ja avisava disso - valide
-in-game antes de decisoes importantes.
+Dados de referencia (bosses, charms, bestiary) portados do dashboard web
+anterior (legacy_web_dashboard/ek_management_system/data.py). Sao dados
+estimados de planejamento - o texto do dashboard antigo ja avisava disso -
+valide in-game antes de decisoes importantes.
 """
+from pathlib import Path
 
-# nome, local, cooldown_dias, chance_loot_raro, lucro_medio_kk, valor_esperado_kk
-_BOSS_RAW = [
-    ("Malvatrix", "Fenrock", 20, "1/500", 8.5, 0.017),
-    ("Bakragore", "Fibula", 20, "1/300", 15.0, 0.05),
-    ("Fury Bringer", "Fenrock", 20, "1/400", 6.0, 0.015),
-    ("Zamirah", "Fenrock", 20, "1/450", 7.2, 0.016),
-    ("Dreaded Ancient Menace", "Fenrock", 20, "1/600", 10.0, 0.017),
-    ("Yielothax", "Fenrock", 20, "1/350", 5.5, 0.016),
-    ("Silencer", "Fenrock", 20, "1/500", 9.0, 0.018),
-    ("Vemiath", "Fenrock", 20, "1/400", 6.8, 0.017),
-    ("Nadir", "Fenrock", 20, "1/550", 8.0, 0.015),
-    ("Vok the Freakish Guard", "Roshamuul", 20, "1/250", 4.5, 0.018),
-    ("Goroma", "Roshamuul", 20, "1/300", 5.0, 0.017),
-    ("Kesar the Whipmaster", "Roshamuul", 20, "1/250", 4.0, 0.016),
-    ("Diseased Bill", "Roshamuul", 20, "1/150", 2.5, 0.017),
-    ("Bones the Chicken", "Roshamuul", 20, "1/100", 1.2, 0.012),
-    ("Zeliko Steelsoul", "Vengoth", 20, "1/300", 5.5, 0.018),
-    ("Serpseayez", "Cobra Bastion", 20, "1/350", 6.0, 0.017),
-    ("Zulazza the Corruptor", "Zao", 20, "1/300", 5.8, 0.019),
-    ("Ravager", "Marapur", 20, "1/500", 12.0, 0.024),
-    ("Wrathful Nargash", "Marapur", 20, "1/450", 9.5, 0.021),
-    ("Lord Retro", "Rookgaard", 20, "1/50", 0.5, 0.01),
-    ("Ferumbras", "Ferumbras Citadel", 20, "1/700", 25.0, 0.036),
-    ("Ghazbaran", "Ghazbaran's Kingdom", 20, "1/700", 22.0, 0.031),
-    ("Orshabaal", "Various", 20, "1/600", 18.0, 0.03),
-    ("Morgaroth", "Various", 20, "1/600", 17.0, 0.028),
-    ("The Pale Worm", "Falcon Bastion", 20, "1/500", 14.0, 0.028),
-    ("Shard of Corruption", "Falcon Bastion", 20, "1/500", 13.5, 0.027),
-    ("Grand Mother Foulscale", "Cobra Bastion", 20, "1/400", 9.0, 0.0225),
-    ("General Murius", "Cobra Bastion", 20, "1/400", 8.5, 0.021),
-    ("Yeti", "Behemoth Isle", 20, "1/200", 3.0, 0.015),
-    ("The Welter", "Feyrist", 20, "1/450", 10.0, 0.022),
-]
+_BESTIARY_RAW_FILE = (
+    Path(__file__).parent.parent.parent
+    / "legacy_web_dashboard" / "ek_management_system" / "imports" / "bestiary_raw.txt"
+)
+
+_all_creature_names_cache = None
+
+
+def all_creature_names():
+    """Lista mestre com o nome de todas as criaturas do jogo - o export do
+    Cyclopedia do Haxta lista TODAS as criaturas (mesmo as com 0 kills),
+    entao serve como catalogo completo, independente do personagem."""
+    global _all_creature_names_cache
+    if _all_creature_names_cache is not None:
+        return _all_creature_names_cache
+    names = []
+    if _BESTIARY_RAW_FILE.exists():
+        with open(_BESTIARY_RAW_FILE, encoding="utf-8") as f:
+            next(f, None)
+            for line in f:
+                parts = line.rstrip("\n").split("\t")
+                if len(parts) >= 5:
+                    names.append(parts[2].strip())
+    _all_creature_names_cache = names
+    return names
+
+# Roster completo do Bosstiary (315 bosses, tiers Bane/Archfoe/Nemesis),
+# extraido de tibiawiki.com.br/wiki/Bosstiário - fonte real do jogo, nao
+# mais uma lista curada de 30. cooldown_dias e uma estimativa generica
+# (Bosstiary nao publica cooldown fixo por boss) so para o farm tracker
+# ter uma referencia de "quando voltar" - vale validar in-game.
+_BOSSTIARY_SOURCE_FILE = Path(__file__).parent.parent / "data" / "bosstiary_source.json"
+_DEFAULT_COOLDOWN_DIAS = 20
 
 
 def build_bosses():
+    import json
+    if not _BOSSTIARY_SOURCE_FILE.exists():
+        return []
+    with open(_BOSSTIARY_SOURCE_FILE, encoding="utf-8") as f:
+        raw = json.load(f)
     return [
         {
-            "nome": nome, "local": local, "cooldown_dias": cd,
-            "chance_loot_raro": chance, "lucro_medio_kk": lucro,
-            "valor_esperado_kk": round(ev, 3),
+            "nome": b["nome"], "tier": b["tier"], "cooldown_dias": _DEFAULT_COOLDOWN_DIAS,
+            "hp": b.get("hp"), "exp": b.get("exp"), "dificuldade": b.get("dificuldade"),
         }
-        for nome, local, cd, chance, lucro, ev in _BOSS_RAW
+        for b in raw
     ]
 
 
