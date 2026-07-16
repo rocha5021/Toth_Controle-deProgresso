@@ -9,10 +9,11 @@ def list_charms(character_id):
         charms.append({
             **charm,
             "ativo": charm["nome"] in active,
+            "grade_atual": active.get(charm["nome"]),
             "image_url": image_cache.get_cached_image_url(charm["nome"], "charm"),
         })
     return sorted(charms, key=lambda c: c["prioridade"])
 
 
-def set_active(character_id, charm_name, active):
-    charm_repo.set_active(character_id, charm_name, active)
+def set_active(character_id, charm_name, active, grade=None):
+    charm_repo.set_active(character_id, charm_name, active, grade)

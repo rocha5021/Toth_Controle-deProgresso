@@ -12,6 +12,28 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
 
 ## ✅ Concluído
 
+### Sessão 2026-07-17 — dados reais do Haxta (Cyclopedia)
+Usuário exportou e colou os dados reais do próprio personagem in-game.
+Tudo isso agora está no banco (seed do Haxta), editável dali pra frente:
+- [x] **Quests** — aba real (não mais placeholder): 27 quest lines
+      concluídas importadas, com campo pra marcar novas manualmente e
+      remover. Por personagem (Tio Musga começa vazio, corretamente).
+- [x] **Bosstiary real** — a BossesView agora mostra **Step** (Nenhum/
+      Bane/Archfoe/Nemesis, editável) e **Kills** (editável +/-) reais,
+      além do farm/cooldown estimado que já existia. 138 dos 315 bosses
+      do roster bateram com o export real do Haxta (o resto são bosses
+      que ele ainda não engajou, ou pequenas diferenças de nome entre o
+      export do jogo e a wiki — aceitável, não trava nada).
+- [x] **Charms ativos reais** — Haxta atualizado com os 5 charms
+      realmente ativos e a grade certa: Divine Wrath II (2), Enflame (1),
+      Freeze II (2), Savage Blow (1), Gut (3).
+- [x] **Aba Conquistas** (nova) — Titles (24), Achievements (166) e
+      Imbuements (23) desbloqueados, importados do Cyclopedia, com busca.
+      Cobre também o pedido de referência de Imbuements.
+- [x] Schema do banco ganhou 4 tabelas novas: `bosstiary_progress`,
+      `quests_completed`, `titles_unlocked`, `achievements_unlocked`,
+      `imbuements_unlocked` (+ `charms_active` ganhou coluna `grade`).
+
 ### Fundação (arquitetura em camadas + SQLite)
 - [x] **Banco SQLite** (`data/thoth.db`) substitui os arquivos JSON por personagem.
       Tabelas: `characters`, `equipment_planning`, `goals`, `roadmap_steps`,
@@ -142,8 +164,9 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
 - [ ] **Hunts do EK** — motor de sugestão priorizando lucro líquido com o
       menor gasto possível. Precisa desenhar uma estimativa de custo
       (supplies) por hunt — hoje não existe esse campo em lugar nenhum.
-- [ ] **Quests** — tracker vazio, pronto pra receber a lista que o usuário
-      vai enviar com as quests já concluídas de Haxta e Tio Musga.
+- [ ] **Dados reais do Tio Musga** — já temos os do Haxta (quests, Bosstiary,
+      charms, titles, achievements, imbuements). Falta o mesmo export do
+      Tio Musga pra ele deixar de começar tudo do zero.
 - [ ] **MS (Tio Musga)**: seção específica de PvP/GvG e treino de Magic Level.
 - [ ] **Armas (Club) + Equipamentos gerais** (referência, não confundir com a
       lista de compras do Planejamento) — existiam no dashboard antigo,

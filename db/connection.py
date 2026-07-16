@@ -86,7 +86,41 @@ CREATE TABLE IF NOT EXISTS boss_farm_log (
 CREATE TABLE IF NOT EXISTS charms_active (
     character_id TEXT NOT NULL,
     charm_name TEXT NOT NULL,
+    grade INTEGER,
     PRIMARY KEY (character_id, charm_name)
+);
+
+CREATE TABLE IF NOT EXISTS bosstiary_progress (
+    character_id TEXT NOT NULL,
+    boss_name TEXT NOT NULL,
+    step INTEGER DEFAULT 0,
+    kills INTEGER DEFAULT 0,
+    PRIMARY KEY (character_id, boss_name)
+);
+
+CREATE TABLE IF NOT EXISTS quests_completed (
+    character_id TEXT NOT NULL,
+    quest_name TEXT NOT NULL,
+    completed_at TEXT,
+    PRIMARY KEY (character_id, quest_name)
+);
+
+CREATE TABLE IF NOT EXISTS titles_unlocked (
+    character_id TEXT NOT NULL,
+    title_name TEXT NOT NULL,
+    PRIMARY KEY (character_id, title_name)
+);
+
+CREATE TABLE IF NOT EXISTS achievements_unlocked (
+    character_id TEXT NOT NULL,
+    achievement_name TEXT NOT NULL,
+    PRIMARY KEY (character_id, achievement_name)
+);
+
+CREATE TABLE IF NOT EXISTS imbuements_unlocked (
+    character_id TEXT NOT NULL,
+    imbuement_name TEXT NOT NULL,
+    PRIMARY KEY (character_id, imbuement_name)
 );
 """
 

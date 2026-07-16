@@ -22,6 +22,8 @@ from app.views.bestiary_view import BestiaryView
 from app.views.planejamento_view import PlanejamentoView
 from app.views.novo_personagem_dialog import NovoPersonagemDialog
 from app.views.news_view import NewsView
+from app.views.quests_view import QuestsView
+from app.views.conquistas_view import ConquistasView
 from app.views.placeholder_view import PlaceholderView
 
 NAV_SECTIONS = [
@@ -32,6 +34,7 @@ NAV_SECTIONS = [
     ("bestiary", "Bestiary"),
     ("charms", "Charms"),
     ("quests", "Quests"),
+    ("conquistas", "Conquistas"),
     ("news", "Mural de Notícias"),
 ]
 
@@ -39,12 +42,13 @@ NAV_SECTIONS = [
 PLACEHOLDER_DESCRIPTIONS = {
     "hunts": "Sugestao de hunts priorizando lucro liquido com o menor gasto possivel (EK) "
              "ou progresso de Bestiary (MS). Depende de um motor de custo/lucro novo — ver CHECKLIST.md.",
-    "quests": "Tracker de quests concluidas/pendentes por personagem. Ainda nao recebi nenhuma lista de "
-              "quests — quando voce mandar (Haxta e Tio Musga), eu populo esta tela com o progresso real.",
 }
 
 # secoes que ja tem uma view funcional propria (nao usam PlaceholderView)
-REAL_VIEW_KEYS = {"personagem", "bosses", "charms", "bestiary", "planejamento", "news"}
+REAL_VIEW_KEYS = {
+    "personagem", "bosses", "charms", "bestiary", "planejamento", "news",
+    "quests", "conquistas",
+}
 
 
 class MainWindow(QMainWindow):
@@ -101,6 +105,12 @@ class MainWindow(QMainWindow):
 
         self.news_view = NewsView()
         self._add_section("news", self.news_view)
+
+        self.quests_view = QuestsView()
+        self._add_section("quests", self.quests_view)
+
+        self.conquistas_view = ConquistasView()
+        self._add_section("conquistas", self.conquistas_view)
 
         for key, label in NAV_SECTIONS:
             if key in REAL_VIEW_KEYS:
@@ -195,6 +205,8 @@ class MainWindow(QMainWindow):
         self.charms_view.set_character(self.current_character)
         self.bestiary_view.set_character(self.current_character)
         self.planejamento_view.set_character(self.current_character)
+        self.quests_view.set_character(self.current_character)
+        self.conquistas_view.set_character(self.current_character)
 
     def _show_section(self, key):
         self.stack.setCurrentWidget(self._section_views[key])

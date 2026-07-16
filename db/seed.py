@@ -13,8 +13,11 @@ import re
 import uuid
 from pathlib import Path
 
-from repositories import character_repo, equipment_repo, goal_repo, roadmap_repo, bestiary_repo
-from services import reference_data, image_cache
+from repositories import (
+    character_repo, equipment_repo, goal_repo, roadmap_repo, bestiary_repo,
+    boss_repo, charm_repo, quest_repo, collectibles_repo,
+)
+from services import reference_data, image_cache, haxta_real_data
 
 BESTIARY_RAW_FILE = (
     Path(__file__).parent.parent.parent
@@ -105,6 +108,24 @@ def _seed_haxta_planning():
         })
 
 
+def _seed_haxta_real_data():
+    """Dados reais exportados do Cyclopedia do Haxta pelo usuario (ver
+    services/haxta_real_data.py) - quests, bosstiary, charms ativos,
+    titles, achievements, imbuements."""
+    quest_repo.bulk_seed("ek_haxta", haxta_real_data.QUEST_LINES_COMPLETED)
+
+    boss_repo.bulk_seed_bosstiary("ek_haxta", [
+        {"nome": nome, "step": step, "kills": kills}
+        for nome, step, kills in haxta_real_data.BOSSTIARY_PROGRESS
+    ])
+
+    charm_repo.bulk_set_active("ek_haxta", haxta_real_data.ACTIVE_CHARMS)
+
+    collectibles_repo.bulk_seed("titles", "ek_haxta", haxta_real_data.TITLES_UNLOCKED)
+    collectibles_repo.bulk_seed("achievements", "ek_haxta", haxta_real_data.ACHIEVEMENTS_UNLOCKED)
+    collectibles_repo.bulk_seed("imbuements", "ek_haxta", haxta_real_data.IMBUEMENTS_UNLOCKED)
+
+
 def run_seed_if_needed():
     from db.connection import is_fresh_database
     if not is_fresh_database():
@@ -116,3 +137,4 @@ def run_seed_if_needed():
     bestiary_entries = _parse_bestiary_raw()
     if bestiary_entries:
         bestiary_repo.bulk_seed("ek_haxta", bestiary_entries)
+    _seed_haxta_real_data()
