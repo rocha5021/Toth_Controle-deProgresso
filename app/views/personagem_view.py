@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
 
 
 TODAS_VOCACOES = "Todas as vocações"
+TODOS_SERVIDORES = "Todos os servidores"
 
 
 def _time_ago(epoch_seconds):
@@ -101,6 +102,10 @@ class PersonagemView(QWidget):
         self.vocation_filter.addItem(TODAS_VOCACOES)
         self.vocation_filter.currentTextChanged.connect(self._render_top_table)
         top_header_row.addWidget(self.vocation_filter)
+        self.world_filter = QComboBox()
+        self.world_filter.addItem(TODOS_SERVIDORES)
+        self.world_filter.currentTextChanged.connect(self._render_top_table)
+        top_header_row.addWidget(self.world_filter)
         root.addLayout(top_header_row)
 
         self.top_table = QTableWidget(0, 4)
@@ -181,27 +186,40 @@ class PersonagemView(QWidget):
         updated_at = self._latest_payload.get("updated_at")
         self.updated_label.setText(f"Atualizado {_time_ago(updated_at)}")
 
-        by_vocation = self._latest_payload.get("top_levels_by_vocation", {})
-        current_selection = self.vocation_filter.currentText()
-        self.vocation_filter.blockSignals(True)
-        self.vocation_filter.clear()
-        self.vocation_filter.addItem(TODAS_VOCACOES)
-        for voc in sorted(by_vocation.keys()):
-            self.vocation_filter.addItem(voc)
-        idx = self.vocation_filter.findText(current_selection)
-        self.vocation_filter.setCurrentIndex(idx if idx >= 0 else 0)
-        self.vocation_filter.blockSignals(False)
+        pool = self._latest_payload.get("level_pool", [])
+        vocations = sorted({e["vocation"] for e in pool if e.get("vocation")})
+        worlds = sorted({e["world"] for e in pool if e.get("world")})
+
+        self._repopulate_filter(self.vocation_filter, TODAS_VOCACOES, vocations)
+        self._repopulate_filter(self.world_filter, TODOS_SERVIDORES, worlds)
 
         self._render_top_table()
+
+    @staticmethod
+    def _repopulate_filter(combo, placeholder, options):
+        current = combo.currentText()
+        combo.blockSignals(True)
+        combo.clear()
+        combo.addItem(placeholder)
+        for opt in options:
+            combo.addItem(opt)
+        idx = combo.findText(current)
+        combo.setCurrentIndex(idx if idx >= 0 else 0)
+        combo.blockSignals(False)
 
     def _render_top_table(self):
         if not self._latest_payload:
             return
-        selection = self.vocation_filter.currentText()
-        if selection and selection != TODAS_VOCACOES:
-            top_levels = self._latest_payload.get("top_levels_by_vocation", {}).get(selection, [])
-        else:
-            top_levels = self._latest_payload.get("top_levels", [])
+        pool = self._latest_payload.get("level_pool", [])
+        vocation = self.vocation_filter.currentText()
+        world = self.world_filter.currentText()
+
+        rows = pool
+        if vocation and vocation != TODAS_VOCACOES:
+            rows = [e for e in rows if e.get("vocation") == vocation]
+        if world and world != TODOS_SERVIDORES:
+            rows = [e for e in rows if e.get("world") == world]
+        top_levels = sorted(rows, key=lambda x: -x["level"])[:20]
 
         self.top_table.setRowCount(len(top_levels))
         for row, entry in enumerate(top_levels):

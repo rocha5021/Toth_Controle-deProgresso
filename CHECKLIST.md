@@ -84,6 +84,31 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
       (abre sem terminal, via `pythonw.exe`).
 - [x] Repositório GitHub: **https://github.com/rocha5021/Toth_Controle-deProgresso**
 
+### Sessão de correções (bugs relatados pelo usuário)
+- [x] **"Dados não atualizam" — causa raiz encontrada e corrigida**: a busca
+      dos 93 mundos era sequencial e levava **132 segundos**, então parecia
+      travado (não era um bug de fato, só lento demais sem indicar isso
+      claramente). Paralelizado (16 threads) — agora leva **~10 segundos**.
+- [x] **Vocações erradas na lista Top Level** — a TibiaData API retorna
+      também as vocações "não promovidas" (Knight/Sorcerer/Druid/Paladin/
+      Monk, de personagens baixos), que não fazem sentido num ranking de
+      nível alto. Filtrado pra só as **5 vocações reais**: Elite Knight,
+      Royal Paladin, Master Sorcerer, Elder Druid, Exalted Monk.
+- [x] **Filtro de servidor** adicionado ao lado do filtro de vocação na aba
+      Personagem — os dois combinam (ex: Top 20 Elder Druid só da Antica).
+- [x] **Mural de Notícias** — aba nova com as atualizações oficiais do Tibia
+      (patch notes, eventos) direto do tibia.com via TibiaData API
+      (`/v4/news/latest` — real, sem scraping), com botão pra abrir a
+      notícia completa no navegador.
+- [x] **Quests vazia mesmo após "passar os dados"** — não é bug: eu nunca
+      recebi nenhuma lista de quests nesta conversa. Atualizei o texto da
+      aba pra deixar isso explícito (antes só dizia "em construção", o que
+      confundiu). Quando você mandar a lista (Haxta e Tio Musga), eu
+      populo de verdade.
+- [x] **Hunts vazia** — não é bug, já era esperado/documentado: a aba
+      Hunts depende de um motor de custo/lucro que ainda não existe (ver
+      pendências). O texto da aba já explica isso.
+
 ## ⏸️ Avaliado e adiado deliberadamente (pedido explícito: só fazer o que gera valor)
 
 - **Relógio digital com animal do Tibia** — decorativo, não ajuda a gerenciar
@@ -102,6 +127,18 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
 
 ## 🚧 Pendente (não descartado, só ainda não priorizado)
 
+- [ ] **Aba "Treino de Skill"** (pedido, inspirado no
+      [intibia.com/exercise-weapons-calculator](https://intibia.com/pt/tools/exercise-weapons-calculator)):
+      calculadora de quantas exercise weapons/horas faltam pra sair do
+      skill atual até um alvo. **Pesquisei bastante e não achei a fórmula
+      exata de crescimento de skill numa fonte confiável** (as calculadoras
+      são JS client-side, a fórmula não fica exposta no HTML/wiki). O que
+      confirmei com segurança: os tipos de exercise weapon e suas
+      cargas/durações reais — Training (50 usos, 1min40s), Regular (500
+      usos, 16min40s), Durable (1.800 usos, 1h), Lasting (14.400 usos, 8h).
+      **Não implementei o cálculo pra não arriscar te dar um número
+      errado numa ferramenta que devia ser confiável** — preciso validar
+      a fórmula certa com você antes (ou você já ter uma fonte confirmada).
 - [ ] **Hunts do EK** — motor de sugestão priorizando lucro líquido com o
       menor gasto possível. Precisa desenhar uma estimativa de custo
       (supplies) por hunt — hoje não existe esse campo em lugar nenhum.
@@ -139,7 +176,20 @@ Atualizar sempre que uma nova solicitação chegar ou um item for concluído.
   `.../wiki/Especial:FilePath/<Arquivo>.gif`, sem Cloudflare.
 - TibiaWiki Bosstiário (roster completo de bosses): página única com 3
   tabelas (Bane/Archfoe/Nemesis), imagem já embutida no HTML de cada linha.
+- Notícias oficiais: `https://api.tibiadata.com/v4/news/latest` — mesmo dado
+  de `tibia.com/news`, mas em JSON real, sem precisar contornar Cloudflare.
 - Repositório do Thoth: `https://github.com/rocha5021/Toth_Controle-deProgresso`
+
+### Sites analisados a pedido do usuário (o que rendeu valor)
+- **tibia.com/news** — não dava pra usar direto (Cloudflare), mas achei o
+  mesmo conteúdo real via TibiaData API (`/v4/news/latest`) → virou o
+  Mural de Notícias.
+- **tibiawiki.com.br/wiki/Home** — já é a fonte usada pra praticamente
+  todas as imagens do app (Bestiary/Bosses/Charms) e pro roster completo
+  de bosses; não achei conteúdo novo de valor além do que já exploramos.
+- **intibia.com/exercise-weapons-calculator** — inspirou o pedido de aba
+  de Treino de Skill; dados confiáveis de exercise weapons confirmados
+  (ver pendências), fórmula de crescimento de skill ainda não confirmada.
 
 ## Pastas do projeto
 

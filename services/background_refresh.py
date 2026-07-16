@@ -37,18 +37,18 @@ class _FetchWorker(QThread):
 
             try:
                 pool = tibiadata._fetch_highscore_pool()
-                top_levels = tibiadata.get_top_levels(limit=20, pool=pool)
-                top_levels_by_vocation = tibiadata.get_top_levels_by_vocation(limit=20, pool=pool)
+                # so guarda o pool ja filtrado pras 5 vocacoes "de verdade" -
+                # a tela monta Top N por vocacao/mundo a partir dele, sem
+                # precisar buscar de novo pra cada combinacao de filtro
+                level_pool = [e for e in pool if e["vocation"] in tibiadata.VALID_VOCATIONS]
             except Exception:
                 cached = storage.load_tracked_cache() or {}
-                top_levels = cached.get("top_levels", [])
-                top_levels_by_vocation = cached.get("top_levels_by_vocation", {})
+                level_pool = cached.get("level_pool", [])
 
             payload = {
                 "updated_at": time.time(),
                 "characters": characters,
-                "top_levels": top_levels,
-                "top_levels_by_vocation": top_levels_by_vocation,
+                "level_pool": level_pool,
             }
             storage.save_tracked_cache(payload)
             self.finished_ok.emit(payload)

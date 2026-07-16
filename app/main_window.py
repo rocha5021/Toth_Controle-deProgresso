@@ -21,6 +21,7 @@ from app.views.charms_view import CharmsView
 from app.views.bestiary_view import BestiaryView
 from app.views.planejamento_view import PlanejamentoView
 from app.views.novo_personagem_dialog import NovoPersonagemDialog
+from app.views.news_view import NewsView
 from app.views.placeholder_view import PlaceholderView
 
 NAV_SECTIONS = [
@@ -31,17 +32,19 @@ NAV_SECTIONS = [
     ("bestiary", "Bestiary"),
     ("charms", "Charms"),
     ("quests", "Quests"),
+    ("news", "Mural de Notícias"),
 ]
 
 # secoes que ainda nao tem view real - mostram um aviso "em construcao"
 PLACEHOLDER_DESCRIPTIONS = {
     "hunts": "Sugestao de hunts priorizando lucro liquido com o menor gasto possivel (EK) "
              "ou progresso de Bestiary (MS). Depende de um motor de custo/lucro novo — ver CHECKLIST.md.",
-    "quests": "Tracker de quests concluidas/pendentes por personagem — pronto para receber a lista que voce vai enviar.",
+    "quests": "Tracker de quests concluidas/pendentes por personagem. Ainda nao recebi nenhuma lista de "
+              "quests — quando voce mandar (Haxta e Tio Musga), eu populo esta tela com o progresso real.",
 }
 
 # secoes que ja tem uma view funcional propria (nao usam PlaceholderView)
-REAL_VIEW_KEYS = {"personagem", "bosses", "charms", "bestiary", "planejamento"}
+REAL_VIEW_KEYS = {"personagem", "bosses", "charms", "bestiary", "planejamento", "news"}
 
 
 class MainWindow(QMainWindow):
@@ -95,6 +98,9 @@ class MainWindow(QMainWindow):
 
         self.planejamento_view = PlanejamentoView(self.refresh_manager)
         self._add_section("planejamento", self.planejamento_view)
+
+        self.news_view = NewsView()
+        self._add_section("news", self.news_view)
 
         for key, label in NAV_SECTIONS:
             if key in REAL_VIEW_KEYS:
